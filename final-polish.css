@@ -138,6 +138,34 @@ textarea:focus-visible{
   transform:scaleX(1);
 }
 
+/* Footer social SVGs have different internal viewBox whitespace.
+   Anchor each mark to the box itself, then apply tiny optical offsets. */
+.footer .footlinks a:nth-last-child(-n+3){
+  position:relative;
+  display:block;
+}
+.footer .footlinks a:nth-last-child(-n+3)::before{
+  position:absolute;
+  inset:0;
+  width:auto;
+  height:auto;
+  margin:0;
+  background-repeat:no-repeat;
+  background-size:18px 18px;
+}
+.footer .footlinks a:nth-last-child(3)::before{
+  background-position:50% 52%;
+  background-size:18px 18px;
+}
+.footer .footlinks a:nth-last-child(2)::before{
+  background-position:50% 51%;
+  background-size:18px 18px;
+}
+.footer .footlinks a:nth-last-child(1)::before{
+  background-position:50% 50%;
+  background-size:18px 18px;
+}
+
 @media(max-width:1100px){
   .section{
     padding-block:clamp(78px,7vw,98px);
