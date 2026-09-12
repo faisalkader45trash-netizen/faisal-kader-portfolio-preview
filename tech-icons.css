@@ -36,41 +36,27 @@
 }
 .techpill span{line-height:1}
 
-/* Keep the approved 42 / 58 desktop split. */
 .heroin{grid-template-columns:minmax(0,42fr) minmax(0,58fr)}
 .heroin > div:first-child,.heroart{min-width:0}
+.heroart{isolation:isolate;overflow:visible}
 
-/* Treat the whole 58% visual side as one composition canvas. */
-.heroart{
-  isolation:isolate;
-  overflow:visible;
-}
-
-/* Portrait gets a protected center-left safe zone, leaving a clean right orbit lane. */
 .heroart .heroimg{
   max-width:clamp(450px,27vw,610px);
-  transform:translateX(-9%);
+  transform:translateX(-18%);
   transform-origin:center bottom;
 }
 
-/* Circle follows the portrait, not the cards. The full rim stays visible around it. */
 .heroart::before{
   width:clamp(470px,31vw,700px)!important;
   height:clamp(470px,31vw,700px)!important;
   left:42%!important;
   top:49%!important;
   border:1px solid rgba(28,155,255,.74)!important;
-  background:
-    radial-gradient(circle at 50% 48%,rgba(8,112,255,.34) 0%,rgba(5,86,215,.20) 34%,rgba(1,39,104,.08) 58%,transparent 72%)!important;
-  box-shadow:
-    0 0 0 1px rgba(43,174,255,.08),
-    0 0 42px rgba(0,122,255,.34),
-    0 0 115px rgba(0,92,255,.28),
-    inset 0 0 80px rgba(0,121,255,.18)!important;
+  background:radial-gradient(circle at 50% 48%,rgba(8,112,255,.34) 0%,rgba(5,86,215,.20) 34%,rgba(1,39,104,.08) 58%,transparent 72%)!important;
+  box-shadow:0 0 0 1px rgba(43,174,255,.08),0 0 42px rgba(0,122,255,.34),0 0 115px rgba(0,92,255,.28),inset 0 0 80px rgba(0,121,255,.18)!important;
   filter:drop-shadow(0 0 24px rgba(0,126,255,.18));
 }
 
-/* Decorative bands stay behind the portrait and cards. */
 .heroart::after{
   z-index:1!important;
   right:-2%!important;
@@ -78,15 +64,11 @@
   width:clamp(210px,15vw,360px)!important;
   height:clamp(420px,28vw,680px)!important;
   opacity:.90!important;
-  background:
-    linear-gradient(142deg,transparent 31%,rgba(0,73,190,.24) 31.5%,rgba(0,80,210,.38) 38%,transparent 38.5%),
-    linear-gradient(142deg,transparent 45%,rgba(0,100,255,.92) 45.5%,rgba(0,105,255,.92) 52%,transparent 52.5%),
-    linear-gradient(142deg,transparent 59%,rgba(15,110,255,.42) 59.5%,rgba(15,110,255,.42) 65%,transparent 65.5%)!important;
+  background:linear-gradient(142deg,transparent 31%,rgba(0,73,190,.24) 31.5%,rgba(0,80,210,.38) 38%,transparent 38.5%),linear-gradient(142deg,transparent 45%,rgba(0,100,255,.92) 45.5%,rgba(0,105,255,.92) 52%,transparent 52.5%),linear-gradient(142deg,transparent 59%,rgba(15,110,255,.42) 59.5%,rgba(15,110,255,.42) 65%,transparent 65.5%)!important;
   filter:drop-shadow(0 0 15px rgba(0,102,255,.35)) drop-shadow(0 0 34px rgba(0,82,255,.20));
 }
 .heroart .heroimg{z-index:3}
 
-/* Floating glass cards share the same geometry but never enter the portrait safe zone. */
 .heroart .floatcard{
   z-index:5;
   width:clamp(96px,6.9vw,138px);
@@ -103,11 +85,7 @@
   background:linear-gradient(145deg,rgba(15,47,84,.58),rgba(5,22,43,.42) 68%,rgba(4,18,35,.50));
   -webkit-backdrop-filter:blur(18px) saturate(138%);
   backdrop-filter:blur(18px) saturate(138%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.11),
-    inset 0 -1px 0 rgba(37,141,255,.07),
-    0 16px 34px rgba(0,5,20,.29),
-    0 0 29px rgba(18,131,255,.14);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.11),inset 0 -1px 0 rgba(37,141,255,.07),0 16px 34px rgba(0,5,20,.29),0 0 29px rgba(18,131,255,.14);
   transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background .24s ease;
 }
 .heroart .floatcard::before{
@@ -122,10 +100,7 @@
   transform:translateY(-3px);
   border-color:rgba(87,190,255,.72);
   background:linear-gradient(145deg,rgba(19,57,102,.70),rgba(6,26,50,.55));
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.13),
-    0 18px 40px rgba(0,5,20,.34),
-    0 0 38px rgba(25,148,255,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.13),0 18px 40px rgba(0,5,20,.34),0 0 38px rgba(25,148,255,.22);
 }
 .heroart .floatcard .float-logo{
   width:clamp(46px,3.4vw,68px);
@@ -142,21 +117,18 @@
   text-shadow:0 1px 8px rgba(0,0,0,.24);
 }
 
-/* Reference-style orbit: left lane / upper-right / far-right / lower-right. */
-.heroart .fc1{left:0%;top:22%}
-.heroart .fc2{right:12%;top:4%}
-.heroart .fc3{right:-1%;top:34%}
-.heroart .fc4{right:11%;bottom:6%}
+.heroart .fc1{left:14%;top:13%}
+.heroart .fc2{right:34%;top:1%}
+.heroart .fc3{right:15%;top:21%}
+.heroart .fc4{right:22%;bottom:12%}
 
-/* Brand-specific restrained glow. */
 .heroart .fc1{box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 16px 34px rgba(0,5,20,.29),0 0 34px rgba(45,201,255,.19)}
 .heroart .fc2{box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 16px 34px rgba(0,5,20,.29),0 0 31px rgba(63,196,89,.14)}
 .heroart .fc3{box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 16px 34px rgba(0,5,20,.29),0 0 29px rgba(104,170,255,.13)}
 .heroart .fc4{box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 16px 34px rgba(0,5,20,.29),0 0 33px rgba(51,193,103,.15)}
 
-/* Handwritten accent stays in the empty left-lower orbit lane. */
 .heroart .scribble{
-  left:1%!important;
+  left:12%!important;
   bottom:21%!important;
   z-index:6;
   width:max-content;
@@ -188,14 +160,13 @@
   transform:rotate(-9deg);
 }
 
-/* Keep the approved far-right tagline anchor. */
 .hero::after{
   content:"Web Solutions\A for a Better\A Tomorrow";
   white-space:pre;
   position:absolute;
   z-index:7;
-  right:clamp(24px,3.2vw,76px);
-  bottom:clamp(92px,8.5vw,176px);
+  right:clamp(12px,1.5vw,28px);
+  bottom:clamp(24px,3vw,56px);
   width:clamp(150px,11vw,230px);
   padding-bottom:clamp(20px,1.6vw,32px);
   border-bottom:2px solid rgba(41,177,255,.90);
@@ -208,7 +179,6 @@
   pointer-events:none;
 }
 
-/* Cloudinary social icons replace the older CSS-mask artwork. */
 .socials a::before{
   -webkit-mask-image:none!important;
   mask-image:none!important;
@@ -221,43 +191,39 @@
   width:30px!important;
   height:30px!important;
   border-radius:9px!important;
-  box-shadow:
-    inset 0 0 0 1px rgba(123,188,255,.12),
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 0 16px rgba(46,156,255,.10)!important;
+  box-shadow:inset 0 0 0 1px rgba(123,188,255,.12),inset 0 1px 0 rgba(255,255,255,.08),0 0 16px rgba(46,156,255,.10)!important;
 }
 .socials a:nth-child(1)::before{background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216321/github--icon.svg")!important}
 .socials a:nth-child(2)::before{background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216321/linkedin-icon.svg")!important}
 .socials a:nth-child(3)::before{background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216322/Emai-icon.svg")!important}
 .socials a:hover::before{
   background-size:21px 21px!important;
-  box-shadow:
-    inset 0 0 0 1px rgba(151,210,255,.18),
-    inset 0 1px 0 rgba(255,255,255,.10),
-    0 0 20px rgba(50,171,255,.22)!important;
+  box-shadow:inset 0 0 0 1px rgba(151,210,255,.18),inset 0 1px 0 rgba(255,255,255,.10),0 0 20px rgba(50,171,255,.22)!important;
 }
 
 @media(max-width:1300px){
   .heroin{grid-template-columns:minmax(0,44fr) minmax(0,56fr)}
-  .heroart .heroimg{transform:translateX(-7%);max-width:clamp(430px,31vw,560px)}
+  .heroart .heroimg{transform:translateX(-12%);max-width:clamp(430px,31vw,560px)}
   .heroart::before{left:43%!important;width:clamp(430px,34vw,620px)!important;height:clamp(430px,34vw,620px)!important}
-  .heroart .fc1{left:-1%;top:23%}
-  .heroart .fc2{right:9%;top:5%}
-  .heroart .fc3{right:-1%;top:35%}
-  .heroart .fc4{right:9%;bottom:7%}
-  .hero::after{right:20px;width:145px;font-size:17px}
+  .heroart .fc1{left:10%;top:16%}
+  .heroart .fc2{right:29%;top:2%}
+  .heroart .fc3{right:12%;top:23%}
+  .heroart .fc4{right:18%;bottom:11%}
+  .heroart .scribble{left:9%!important}
+  .hero::after{right:14px;bottom:36px;width:145px;font-size:17px}
 }
 
 @media(max-width:1100px){
   .heroin{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}
-  .heroart .heroimg{transform:translateX(-5%);max-width:460px}
+  .heroart .heroimg{transform:translateX(-7%);max-width:460px}
   .heroart::before{left:44%!important}
   .heroart .floatcard{width:82px;min-height:88px;padding:9px}
   .heroart .floatcard .float-logo{width:36px;height:36px}
-  .heroart .fc1{left:-1%;top:25%}
-  .heroart .fc2{right:6%;top:8%}
-  .heroart .fc3{right:-1%;top:37%}
-  .heroart .fc4{right:6%;bottom:8%}
+  .heroart .fc1{left:5%;top:20%}
+  .heroart .fc2{right:20%;top:7%}
+  .heroart .fc3{right:5%;top:31%}
+  .heroart .fc4{right:13%;bottom:10%}
+  .heroart .scribble{left:5%!important}
   .hero::after{display:none}
 }
 
