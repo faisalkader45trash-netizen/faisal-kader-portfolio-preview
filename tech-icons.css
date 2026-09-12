@@ -1,0 +1,126 @@
+/* MERN identity system for the eight hero placements: 4 bottom pills + 4 floating cards. */
+.techpill{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:46px;
+  padding:9px 15px 9px 11px;
+  border:1px solid rgba(78,157,255,.25);
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(12,30,54,.68),rgba(5,18,35,.52));
+  color:#f5f9ff;
+  -webkit-backdrop-filter:blur(12px) saturate(120%);
+  backdrop-filter:blur(12px) saturate(120%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.07),
+    0 10px 22px rgba(0,7,24,.18),
+    0 0 18px rgba(29,126,255,.06);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease;
+}
+.techpill:hover{
+  transform:translateY(-2px);
+  border-color:rgba(85,172,255,.45);
+  background:linear-gradient(180deg,rgba(16,39,70,.8),rgba(6,22,43,.64));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 12px 26px rgba(0,7,24,.24),
+    0 0 20px rgba(29,134,255,.12);
+}
+.techpill .tech-logo{
+  width:clamp(24px,1.55vw,31px);
+  height:clamp(24px,1.55vw,31px);
+  object-fit:contain;
+  flex:0 0 auto;
+  filter:drop-shadow(0 0 7px rgba(48,174,255,.22));
+}
+.techpill span{
+  line-height:1;
+}
+
+/* Floating glass cards around the portrait. */
+.heroart .floatcard{
+  width:clamp(86px,5.9vw,118px);
+  min-height:clamp(96px,6.5vw,126px);
+  padding:clamp(11px,.8vw,15px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+  border:1px solid rgba(72,168,255,.42);
+  border-radius:14px;
+  background:
+    linear-gradient(180deg,rgba(10,38,71,.55),rgba(4,20,39,.42));
+  -webkit-backdrop-filter:blur(16px) saturate(132%);
+  backdrop-filter:blur(16px) saturate(132%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.1),
+    inset 0 -1px 0 rgba(41,145,255,.06),
+    0 12px 30px rgba(0,6,21,.26),
+    0 0 26px rgba(26,137,255,.12);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background .24s ease;
+}
+.heroart .floatcard:hover{
+  transform:translateY(-3px);
+  border-color:rgba(92,190,255,.65);
+  background:linear-gradient(180deg,rgba(14,48,87,.7),rgba(5,25,47,.54));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 16px 36px rgba(0,6,21,.32),
+    0 0 34px rgba(30,149,255,.2);
+}
+.heroart .floatcard .float-logo{
+  width:clamp(40px,2.8vw,56px);
+  height:clamp(40px,2.8vw,56px);
+  object-fit:contain;
+  filter:drop-shadow(0 0 11px rgba(46,176,255,.28));
+}
+.heroart .floatcard strong{
+  font-size:clamp(11px,.72vw,14px);
+  line-height:1.1;
+  color:#fff;
+  letter-spacing:.005em;
+}
+
+/* Orbit placement: keeps face/body clear and balances the right-side composition. */
+.heroart .fc1{left:4%;top:23%}
+.heroart .fc2{right:17%;top:9%}
+.heroart .fc3{right:2%;top:34%}
+.heroart .fc4{right:15%;bottom:10%}
+
+/* Give each brand just enough individual luminous character without looking neon-heavy. */
+.heroart .fc1{box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 30px rgba(0,6,21,.26),0 0 28px rgba(48,193,255,.14)}
+.heroart .fc2{box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 30px rgba(0,6,21,.26),0 0 28px rgba(68,194,92,.10)}
+.heroart .fc3{box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 30px rgba(0,6,21,.26),0 0 26px rgba(118,174,255,.10)}
+.heroart .fc4{box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 30px rgba(0,6,21,.26),0 0 28px rgba(59,188,106,.11)}
+
+@media(max-width:1100px){
+  .heroart .floatcard{width:82px;min-height:90px;padding:10px}
+  .heroart .floatcard .float-logo{width:38px;height:38px}
+  .heroart .fc1{left:1%;top:24%}
+  .heroart .fc2{right:12%;top:10%}
+  .heroart .fc3{right:0;top:37%}
+  .heroart .fc4{right:11%;bottom:9%}
+}
+
+@media(max-width:900px){
+  .heroart .fc1{left:8%;top:23%}
+  .heroart .fc2{right:18%;top:10%}
+  .heroart .fc3{right:7%;top:36%}
+  .heroart .fc4{right:16%;bottom:9%}
+}
+
+@media(max-width:620px){
+  .techrow{gap:8px}
+  .techpill{min-height:42px;padding:8px 12px 8px 9px;gap:8px;border-radius:10px}
+  .techpill .tech-logo{width:23px;height:23px}
+  .heroart .floatcard{width:68px;min-height:72px;padding:7px;gap:5px;border-radius:11px}
+  .heroart .floatcard .float-logo{width:29px;height:29px}
+  .heroart .floatcard strong{font-size:10px}
+  .heroart .fc1{left:0;top:28%}
+  .heroart .fc2{right:8%;top:12%}
+  .heroart .fc3{right:0;top:38%}
+  .heroart .fc4{right:8%;bottom:9%}
+}
