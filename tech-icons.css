@@ -188,6 +188,41 @@
   pointer-events:none;
 }
 
+/* Cloudinary social icons replace the older CSS-mask artwork. */
+.socials a::before{
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  -webkit-mask-size:initial!important;
+  mask-size:initial!important;
+  background-color:transparent!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:20px 20px!important;
+  width:30px!important;
+  height:30px!important;
+  border-radius:9px!important;
+  box-shadow:
+    inset 0 0 0 1px rgba(123,188,255,.12),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 0 16px rgba(46,156,255,.10)!important;
+}
+.socials a:nth-child(1)::before{
+  background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216321/github--icon.svg")!important;
+}
+.socials a:nth-child(2)::before{
+  background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216321/linkedin-icon.svg")!important;
+}
+.socials a:nth-child(3)::before{
+  background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216322/Emai-icon.svg")!important;
+}
+.socials a:hover::before{
+  background-size:21px 21px!important;
+  box-shadow:
+    inset 0 0 0 1px rgba(151,210,255,.18),
+    inset 0 1px 0 rgba(255,255,255,.10),
+    0 0 20px rgba(50,171,255,.22)!important;
+}
+
 @media(max-width:1300px){
   .heroart .fc1{left:-1%;top:22%}
   .heroart .fc2{right:26%;top:7%}
@@ -229,4 +264,5 @@
   .heroart .scribble{left:0!important;bottom:24%!important}
   .heroart .scribble::before{font-size:16px}
   .heroart .scribble::after{height:2px;margin-top:8px}
+  .socials a::before{width:27px!important;height:27px!important;background-size:18px 18px!important}
 }
