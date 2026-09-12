@@ -1,0 +1,179 @@
+/* Phase 4: Development Journey — premium progression timeline matching the Hero system. */
+#journey{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  color:#f7fbff;
+  background:
+    radial-gradient(circle at 14% 22%,rgba(19,124,255,.14),transparent 27%),
+    radial-gradient(circle at 88% 70%,rgba(0,172,255,.085),transparent 24%),
+    linear-gradient(135deg,#020b17 0%,#061321 50%,#04101d 100%)!important;
+  border-top:1px solid rgba(80,165,255,.09);
+  border-bottom:1px solid rgba(80,165,255,.09);
+}
+#journey::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-image:
+    linear-gradient(rgba(72,140,205,.034) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(72,140,205,.034) 1px,transparent 1px);
+  background-size:38px 38px;
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.70),rgba(0,0,0,.22));
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.70),rgba(0,0,0,.22));
+}
+#journey::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:clamp(430px,34vw,760px);
+  height:clamp(430px,34vw,760px);
+  left:50%;
+  top:48%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  border:1px solid rgba(43,165,255,.10);
+  box-shadow:0 0 95px rgba(0,105,255,.12),inset 0 0 115px rgba(0,116,255,.045);
+}
+
+#journey .shell{position:relative;z-index:2}
+#journey .kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:#2ca7ff!important;
+  font-weight:900;
+  letter-spacing:.24em;
+}
+#journey .kicker::after{
+  content:"";
+  width:clamp(62px,5vw,98px);
+  height:1px;
+  background:linear-gradient(90deg,#2ca7ff,transparent);
+}
+#journey h2{
+  max-width:920px;
+  margin:16px 0 18px;
+  color:#fff;
+  font-size:clamp(42px,3.35vw,68px);
+  line-height:.99;
+  letter-spacing:-.045em;
+}
+#journey .lead{
+  max-width:760px;
+  color:#b8c8da;
+  font-size:clamp(16px,1vw,19px);
+  line-height:1.75;
+}
+
+#journey .journey{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(18px,1.35vw,26px);
+  margin-top:clamp(48px,3.6vw,72px);
+}
+#journey .journey::before{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  top:34px;
+  height:2px;
+  z-index:0;
+  background:linear-gradient(90deg,rgba(35,151,255,.12),rgba(45,180,255,.85) 18%,rgba(44,173,255,.62) 82%,rgba(35,151,255,.12));
+  box-shadow:0 0 18px rgba(37,162,255,.20);
+}
+
+#journey .step{
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  min-height:clamp(260px,17vw,330px);
+  padding:clamp(28px,1.9vw,38px);
+  padding-top:clamp(78px,5.3vw,102px);
+  border:1px solid rgba(83,166,248,.16);
+  border-radius:22px;
+  background:linear-gradient(148deg,rgba(14,41,74,.60),rgba(5,19,37,.58) 60%,rgba(4,15,30,.72));
+  -webkit-backdrop-filter:blur(16px) saturate(125%);
+  backdrop-filter:blur(16px) saturate(125%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 20px 46px rgba(0,5,18,.22),0 0 26px rgba(26,132,255,.045);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background .24s ease;
+}
+#journey .step::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 20% 0%,rgba(47,168,255,.10),transparent 30%);
+}
+#journey .step::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:42%;
+  height:2px;
+  background:linear-gradient(90deg,#168cff,#42c5ff,transparent);
+  box-shadow:0 0 14px rgba(38,173,255,.28);
+  transform:scaleX(.42);
+  transform-origin:left center;
+  transition:transform .25s ease;
+}
+#journey .step:hover{
+  transform:translateY(-6px);
+  border-color:rgba(80,182,255,.42);
+  background:linear-gradient(148deg,rgba(18,55,98,.72),rgba(6,24,46,.66));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.065),0 24px 52px rgba(0,5,18,.28),0 0 32px rgba(31,145,255,.10);
+}
+#journey .step:hover::after{transform:scaleX(1)}
+
+#journey .stepnum{
+  position:absolute;
+  top:0;
+  left:clamp(24px,1.8vw,34px);
+  transform:translateY(-50%);
+  display:grid;
+  place-items:center;
+  width:68px;
+  height:68px;
+  border:1px solid rgba(77,183,255,.40);
+  border-radius:50%;
+  color:#67c9ff;
+  background:linear-gradient(180deg,rgba(17,60,103,.96),rgba(5,27,51,.96));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 0 8px rgba(5,18,35,.92),0 0 26px rgba(35,161,255,.22);
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+#journey .step h3{
+  position:relative;
+  z-index:2;
+  margin:0 0 14px;
+  color:#fff;
+  font-size:clamp(20px,1.35vw,27px);
+  line-height:1.13;
+  letter-spacing:-.025em;
+}
+#journey .step p{
+  position:relative;
+  z-index:2;
+  margin:0;
+  color:#aebfd1;
+  font-size:clamp(14px,.88vw,17px);
+  line-height:1.72;
+}
+
+@media(max-width:1100px){
+  #journey .journey{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:42px}
+  #journey .journey::before{display:none}
+  #journey .step{min-height:240px}
+}
+
+@media(max-width:620px){
+  #journey h2{font-size:clamp(36px,10vw,44px)}
+  #journey .journey{grid-template-columns:1fr;gap:34px;margin-top:52px}
+  #journey .step{min-height:auto;padding:72px 22px 26px}
+  #journey .stepnum{left:22px;width:60px;height:60px}
+}
