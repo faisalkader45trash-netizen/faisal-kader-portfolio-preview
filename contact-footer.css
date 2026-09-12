@@ -81,26 +81,30 @@
 #contact .contactitem{
   position:relative;
   display:grid;
-  grid-template-columns:48px minmax(0,1fr);
-  grid-template-rows:auto auto;
+  grid-template-columns:48px minmax(0,1fr) 34px;
+  grid-template-rows:auto;
   column-gap:14px;
   align-items:center;
-  min-height:74px;
+  min-height:78px;
   margin:0;
-  padding:13px 16px 13px 14px;
+  padding:13px 14px;
   border:1px solid rgba(84,169,255,.18);
   border-radius:16px;
-  background:linear-gradient(145deg,rgba(15,43,77,.58),rgba(5,20,38,.54));
-  color:#ddecfb;
+  background-image:
+    linear-gradient(108deg,transparent 0%,transparent 38%,rgba(75,188,255,.11) 48%,transparent 58%,transparent 100%),
+    linear-gradient(145deg,rgba(15,43,77,.58),rgba(5,20,38,.54));
+  background-size:230% 100%,100% 100%;
+  background-position:125% 0,0 0;
+  color:transparent;
+  font-size:0;
   text-decoration:none;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 14px 34px rgba(0,5,18,.17);
-  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease;
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background-position .48s ease;
   overflow:hidden;
 }
 #contact .contactitem::before{
   content:"";
   grid-column:1;
-  grid-row:1 / span 2;
   width:48px;
   height:48px;
   border:1px solid rgba(92,178,255,.22);
@@ -110,6 +114,7 @@
   background-position:center;
   background-size:25px 25px;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 0 20px rgba(42,158,255,.10);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
 }
 #contact .contactitem:nth-child(1)::before{
   background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216322/Emai-icon.svg");
@@ -120,25 +125,62 @@
 #contact .contactitem:nth-child(3)::before{
   background-image:url("https://res.cloudinary.com/yqhqtpgv/image/upload/v1789216321/linkedin-icon.svg");
 }
+#contact .contactitem::after{
+  content:"↗";
+  grid-column:3;
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  border:1px solid rgba(82,171,255,.16);
+  border-radius:11px;
+  color:#59c1ff;
+  background:rgba(7,29,52,.56);
+  font-size:15px;
+  font-weight:800;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  transition:transform .24s ease,border-color .24s ease,background .24s ease,box-shadow .24s ease;
+}
 #contact .contactitem span{
   grid-column:2;
-  margin:0 0 4px;
-  color:#5dbfff;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  display:block;
+  margin:0;
+  color:#edf7ff;
+  font-size:14px;
+  font-weight:850;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  text-transform:none;
 }
-#contact .contactitem{
-  font-size:clamp(12px,.78vw,14px);
-  font-weight:750;
-  overflow-wrap:anywhere;
+#contact .contactitem span::after{
+  display:block;
+  margin-top:5px;
+  color:#8299b1;
+  font-size:11.5px;
+  font-weight:650;
+  line-height:1.35;
+  letter-spacing:0;
+  text-transform:none;
 }
+#contact .contactitem:nth-child(1) span::after{content:"faisalkader45trash@gmail.com"}
+#contact .contactitem:nth-child(2) span::after{content:"Explore my code & repositories"}
+#contact .contactitem:nth-child(3) span::after{content:"Professional profile & network"}
 #contact .contactitem:hover{
-  transform:translateY(-3px);
-  border-color:rgba(79,184,255,.44);
-  background:linear-gradient(145deg,rgba(18,54,96,.70),rgba(6,25,47,.62));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.065),0 18px 40px rgba(0,5,18,.24),0 0 30px rgba(37,146,255,.10);
+  transform:translateY(-4px);
+  border-color:rgba(79,184,255,.46);
+  background-position:-35% 0,0 0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 20px 42px rgba(0,5,18,.25),0 0 30px rgba(37,146,255,.11);
+}
+#contact .contactitem:hover::before{
+  transform:scale(1.06) rotate(-2deg);
+  border-color:rgba(80,188,255,.40);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 25px rgba(42,158,255,.20);
+}
+#contact .contactitem:hover::after{
+  transform:translate(3px,-3px);
+  border-color:rgba(75,187,255,.40);
+  background:rgba(11,43,76,.78);
+  box-shadow:0 0 18px rgba(40,157,255,.14);
 }
 
 #contact .form{
@@ -264,8 +306,9 @@
 @media(max-width:1050px){
   #contact .contactgrid{grid-template-columns:1fr;gap:44px}
   #contact .contactlist{grid-template-columns:repeat(3,minmax(0,1fr))}
-  #contact .contactitem{grid-template-columns:44px minmax(0,1fr);min-height:72px}
+  #contact .contactitem{grid-template-columns:44px minmax(0,1fr) 30px;min-height:74px}
   #contact .contactitem::before{width:44px;height:44px;background-size:23px 23px}
+  #contact .contactitem::after{width:30px;height:30px}
   .footer .footin{grid-template-columns:1fr;justify-items:start}
   .footer .footlinks{justify-content:flex-start}
 }
