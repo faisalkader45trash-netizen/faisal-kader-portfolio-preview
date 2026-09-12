@@ -1,0 +1,136 @@
+/* Continuous Canvas
+   One page-wide navy atmosphere replaces stacked opaque section backgrounds.
+   Content, cards, typography and section spacing stay unchanged. */
+
+html{
+  background:#020a16;
+}
+
+body{
+  position:relative;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 88% 27%,transparent 0 330px,rgba(53,171,255,.075) 331px,rgba(53,171,255,.075) 332px,transparent 333px),
+    radial-gradient(circle at 10% 49%,transparent 0 300px,rgba(30,142,255,.055) 301px,rgba(30,142,255,.055) 302px,transparent 303px),
+    radial-gradient(circle at 82% 69%,transparent 0 390px,rgba(48,165,255,.060) 391px,rgba(48,165,255,.060) 392px,transparent 393px),
+    radial-gradient(circle at 14% 88%,transparent 0 285px,rgba(30,142,255,.050) 286px,rgba(30,142,255,.050) 287px,transparent 288px),
+    radial-gradient(circle at 18% 24%,rgba(20,126,255,.075),transparent 12%),
+    radial-gradient(circle at 86% 43%,rgba(0,170,255,.050),transparent 12%),
+    radial-gradient(circle at 18% 66%,rgba(17,122,255,.060),transparent 11%),
+    radial-gradient(circle at 84% 86%,rgba(0,164,255,.045),transparent 12%),
+    linear-gradient(rgba(72,140,205,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(72,140,205,.018) 1px,transparent 1px),
+    linear-gradient(180deg,#03101f 0%,#03101f 15%,#041321 31%,#020b17 48%,#03101f 66%,#02101d 83%,#03101f 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+    38px 38px,
+    38px 38px,
+    auto;
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat,repeat,no-repeat;
+}
+
+/* Hero remains the approved master composition, but its bottom dissolves into the canvas. */
+.hero{
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:110px;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(to bottom,rgba(3,16,31,0),rgba(3,16,31,.42) 58%,#03101f 100%);
+}
+.hero .heroin{
+  position:relative;
+  z-index:2;
+}
+
+/* Structural fix: sections no longer paint full-width opaque backgrounds. */
+.hero + .section,
+#about,
+#skills,
+#journey,
+#projects,
+#contact{
+  margin-top:0!important;
+  background:transparent!important;
+  background-image:none!important;
+  border-top:0!important;
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+
+/* Remove per-section grid resets; the grid now belongs to the page canvas. */
+.hero + .section::before,
+#about::before,
+#skills::before,
+#journey::before,
+#projects::before,
+#contact::before{
+  opacity:0!important;
+}
+
+/* Keep the existing oversized glow/orbit circles, but make them atmospheric. */
+.hero + .section::after,
+#about::after,
+#skills::after,
+#journey::after,
+#projects::after,
+#contact::after{
+  opacity:.66;
+}
+
+/* Gentle tonal pools give each section identity without creating a boundary. */
+.hero + .section{
+  background-image:radial-gradient(circle at 86% 72%,rgba(0,158,255,.040),transparent 28%)!important;
+}
+#about{
+  background-image:radial-gradient(circle at 15% 45%,rgba(0,118,255,.045),transparent 30%)!important;
+}
+#skills{
+  background-image:radial-gradient(circle at 82% 34%,rgba(20,126,255,.042),transparent 30%)!important;
+}
+#journey{
+  background-image:radial-gradient(circle at 50% 48%,rgba(18,124,255,.036),transparent 31%)!important;
+}
+#projects{
+  background-image:radial-gradient(circle at 18% 32%,rgba(24,126,255,.040),transparent 30%)!important;
+}
+#contact{
+  background-image:radial-gradient(circle at 86% 62%,rgba(0,170,255,.038),transparent 31%)!important;
+}
+
+/* Footer is the deliberate endpoint, not another full-width section reset. */
+.footer{
+  position:relative;
+  margin-top:0!important;
+  border-top:1px solid rgba(78,158,238,.07)!important;
+  background:linear-gradient(180deg,rgba(3,12,23,.72),#020811 72%)!important;
+  box-shadow:inset 0 26px 38px -42px rgba(42,151,255,.12)!important;
+}
+
+@media(max-width:760px){
+  body{
+    background:
+      radial-gradient(circle at 88% 34%,rgba(20,126,255,.060),transparent 12%),
+      radial-gradient(circle at 12% 68%,rgba(0,164,255,.045),transparent 12%),
+      linear-gradient(rgba(72,140,205,.014) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(72,140,205,.014) 1px,transparent 1px),
+      linear-gradient(180deg,#03101f 0%,#03101f 18%,#020b17 48%,#03101f 100%);
+    background-size:auto,auto,34px 34px,34px 34px,auto;
+    background-repeat:no-repeat,no-repeat,repeat,repeat,no-repeat;
+  }
+  .hero::after{height:82px}
+}
