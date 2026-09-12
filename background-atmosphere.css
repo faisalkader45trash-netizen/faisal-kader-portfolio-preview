@@ -1,0 +1,95 @@
+/* Precision Tech Atmosphere
+   Replaces only the section background grids with subtle arcs, signal paths,
+   nodes and low-opacity halos. Hero, Navbar, cards, content and layout stay untouched. */
+
+.hero + .section::before,
+#about::before,
+#skills::before,
+#journey::before,
+#projects::before,
+#contact::before{
+  background-size:auto!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+}
+
+/* What I Do — upper-right orbit with sparse signal nodes. */
+.hero + .section::before{
+  background-image:
+    radial-gradient(circle at 82% 20%,rgba(75,196,255,.46) 0 2px,rgba(75,196,255,.16) 3px,transparent 6px),
+    radial-gradient(circle at 90% 29%,rgba(75,196,255,.34) 0 2px,transparent 5px),
+    radial-gradient(circle at 96% 40%,rgba(75,196,255,.25) 0 2px,transparent 5px),
+    radial-gradient(ellipse at 108% 28%,transparent 0 43%,rgba(61,178,255,.085) 43.2%,rgba(61,178,255,.085) 43.45%,transparent 43.7%),
+    radial-gradient(circle at 88% 31%,rgba(0,140,255,.070),transparent 19%)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.20) 42%,#000 66%,#000 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.20) 42%,#000 66%,#000 100%)!important;
+}
+
+/* About — a restrained lower-left signal curve and endpoint glow. */
+#about::before{
+  background-image:
+    radial-gradient(circle at 10% 76%,rgba(72,191,255,.40) 0 2px,rgba(72,191,255,.12) 3px,transparent 6px),
+    radial-gradient(circle at 19% 67%,rgba(72,191,255,.28) 0 2px,transparent 5px),
+    radial-gradient(circle at 27% 60%,rgba(72,191,255,.20) 0 2px,transparent 5px),
+    radial-gradient(ellipse at -10% 103%,transparent 0 47%,rgba(60,176,255,.075) 47.2%,rgba(60,176,255,.075) 47.45%,transparent 47.7%),
+    radial-gradient(circle at 13% 77%,rgba(0,126,255,.060),transparent 22%)!important;
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 38%,rgba(0,0,0,.28) 62%,transparent 86%)!important;
+  mask-image:linear-gradient(90deg,#000 0%,#000 38%,rgba(0,0,0,.28) 62%,transparent 86%)!important;
+}
+
+/* Skills — concentric core arcs behind the MERN stack, no grid. */
+#skills::before{
+  background-image:
+    radial-gradient(circle at 73% 50%,transparent 0 23%,rgba(61,179,255,.070) 23.15%,rgba(61,179,255,.070) 23.38%,transparent 23.6% 32%,rgba(61,179,255,.045) 32.15%,rgba(61,179,255,.045) 32.38%,transparent 32.6%),
+    radial-gradient(circle at 84% 34%,rgba(74,194,255,.30) 0 2px,transparent 5px),
+    radial-gradient(circle at 90% 50%,rgba(74,194,255,.22) 0 2px,transparent 5px),
+    radial-gradient(circle at 80% 68%,rgba(74,194,255,.18) 0 2px,transparent 5px),
+    radial-gradient(circle at 73% 50%,rgba(0,132,255,.050),transparent 28%)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 38%,#000 58%,#000 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 38%,#000 58%,#000 100%)!important;
+}
+
+/* Journey — one broad semicircle and only two quiet nodes so it never fights the timeline. */
+#journey::before{
+  background-image:
+    radial-gradient(ellipse at 50% 58%,transparent 0 45%,rgba(58,173,255,.060) 45.15%,rgba(58,173,255,.060) 45.38%,transparent 45.6%),
+    radial-gradient(circle at 29% 63%,rgba(73,190,255,.20) 0 2px,transparent 5px),
+    radial-gradient(circle at 71% 63%,rgba(73,190,255,.20) 0 2px,transparent 5px),
+    radial-gradient(circle at 50% 58%,rgba(0,126,255,.045),transparent 32%)!important;
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,#000 28%,#000 82%,rgba(0,0,0,.22) 100%)!important;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,#000 28%,#000 82%,rgba(0,0,0,.22) 100%)!important;
+}
+
+/* Featured Project — subtle connection path suggesting public site → API → admin flow. */
+#projects::before{
+  background-image:
+    radial-gradient(circle at 12% 30%,rgba(73,192,255,.34) 0 2px,transparent 5px),
+    radial-gradient(circle at 22% 39%,rgba(73,192,255,.25) 0 2px,transparent 5px),
+    radial-gradient(circle at 34% 48%,rgba(73,192,255,.18) 0 2px,transparent 5px),
+    linear-gradient(28deg,transparent 0 30%,rgba(57,171,255,.052) 30.15%,rgba(57,171,255,.052) 30.34%,transparent 30.5% 100%),
+    radial-gradient(circle at 20% 38%,rgba(0,135,255,.055),transparent 23%)!important;
+  -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 46%,rgba(0,0,0,.28) 67%,transparent 88%)!important;
+  mask-image:linear-gradient(90deg,#000 0%,#000 46%,rgba(0,0,0,.28) 67%,transparent 88%)!important;
+}
+
+/* Contact — quiet endpoint halo and two destination nodes. */
+#contact::before{
+  background-image:
+    radial-gradient(circle at 87% 72%,rgba(75,196,255,.30) 0 2px,rgba(75,196,255,.10) 3px,transparent 6px),
+    radial-gradient(circle at 93% 62%,rgba(75,196,255,.20) 0 2px,transparent 5px),
+    radial-gradient(ellipse at 108% 82%,transparent 0 44%,rgba(62,178,255,.065) 44.15%,rgba(62,178,255,.065) 44.4%,transparent 44.65%),
+    radial-gradient(circle at 88% 72%,rgba(0,142,255,.055),transparent 22%)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 45%,#000 68%,#000 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 45%,#000 68%,#000 100%)!important;
+}
+
+@media(max-width:760px){
+  .hero + .section::before,
+  #about::before,
+  #skills::before,
+  #journey::before,
+  #projects::before,
+  #contact::before{
+    opacity:.58;
+  }
+}
