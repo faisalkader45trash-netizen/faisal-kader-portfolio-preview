@@ -131,7 +131,7 @@
 
 #journey .stepnum{
   position:absolute;
-  top:0;
+  top:34px;
   left:clamp(24px,1.8vw,34px);
   transform:translateY(-50%);
   display:grid;
