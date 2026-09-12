@@ -98,6 +98,95 @@ h2{font-size:clamp(36px,3.1vw,64px)}
 .form{padding:clamp(24px,2vw,40px)}
 .footer{padding-block:clamp(28px,2.2vw,44px)}
 
+/* Premium hero social buttons: real platform marks via CSS masks, balanced glass + glow. */
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:clamp(10px,.75vw,14px);
+}
+.socials a{
+  position:relative;
+  isolation:isolate;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:clamp(42px,2.7vw,48px);
+  padding:0 clamp(14px,.95vw,18px) 0 clamp(11px,.75vw,14px);
+  border:1px solid rgba(86,158,255,.28);
+  border-radius:13px;
+  color:#edf7ff;
+  text-decoration:none;
+  font-weight:750;
+  letter-spacing:.005em;
+  background:linear-gradient(180deg,rgba(13,31,56,.66),rgba(5,17,34,.54));
+  -webkit-backdrop-filter:blur(14px) saturate(125%);
+  backdrop-filter:blur(14px) saturate(125%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    inset 0 -1px 0 rgba(78,150,255,.04),
+    0 10px 26px rgba(0,6,22,.22),
+    0 0 18px rgba(31,126,255,.07);
+  transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease,color .22s ease;
+}
+.socials a::before{
+  content:"";
+  flex:0 0 auto;
+  width:28px;
+  height:28px;
+  border-radius:9px;
+  background-color:#9bd9ff;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:17px 17px;
+  box-shadow:
+    inset 0 0 0 1px rgba(137,197,255,.14),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 0 16px rgba(46,156,255,.12);
+  -webkit-mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  -webkit-mask-size:17px 17px;
+  mask-repeat:no-repeat;
+  mask-position:center;
+  mask-size:17px 17px;
+}
+.socials a:nth-child(1)::before{
+  background-color:#ffffff;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .7a11.3 11.3 0 0 0-3.57 22.02c.57.1.77-.25.77-.55v-2.16c-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .95-.3 3.12 1.16a10.8 10.8 0 0 1 5.68 0c2.17-1.46 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.36-2.66 5.31-5.19 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.78.55A11.3 11.3 0 0 0 12 .7Z'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .7a11.3 11.3 0 0 0-3.57 22.02c.57.1.77-.25.77-.55v-2.16c-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.61 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .95-.3 3.12 1.16a10.8 10.8 0 0 1 5.68 0c2.17-1.46 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.36-2.66 5.31-5.19 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.78.55A11.3 11.3 0 0 0 12 .7Z'/%3E%3C/svg%3E");
+}
+.socials a:nth-child(2)::before{
+  background-color:#66b9ff;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.36 7.75h4.28V24H.36V7.75Zm6.91 0h4.1v2.22h.06c.57-1.08 1.97-2.22 4.06-2.22 4.34 0 5.14 2.86 5.14 6.57V24h-4.27v-8.57c0-2.05-.04-4.68-2.85-4.68-2.85 0-3.29 2.23-3.29 4.53V24H7.27V7.75Z'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.36 7.75h4.28V24H.36V7.75Zm6.91 0h4.1v2.22h.06c.57-1.08 1.97-2.22 4.06-2.22 4.34 0 5.14 2.86 5.14 6.57V24h-4.27v-8.57c0-2.05-.04-4.68-2.85-4.68-2.85 0-3.29 2.23-3.29 4.53V24H7.27V7.75Z'/%3E%3C/svg%3E");
+}
+.socials a:nth-child(3)::before{
+  background-color:#8edcff;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.25 5.5h19.5A2.25 2.25 0 0 1 24 7.75v8.5a2.25 2.25 0 0 1-2.25 2.25H2.25A2.25 2.25 0 0 1 0 16.25v-8.5A2.25 2.25 0 0 1 2.25 5.5Zm.26 2.1L12 13.57l9.49-5.97H2.51ZM21.75 16V9.72l-9.15 5.76a1.12 1.12 0 0 1-1.2 0L2.25 9.72V16h19.5Z'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.25 5.5h19.5A2.25 2.25 0 0 1 24 7.75v8.5a2.25 2.25 0 0 1-2.25 2.25H2.25A2.25 2.25 0 0 1 0 16.25v-8.5A2.25 2.25 0 0 1 2.25 5.5Zm.26 2.1L12 13.57l9.49-5.97H2.51ZM21.75 16V9.72l-9.15 5.76a1.12 1.12 0 0 1-1.2 0L2.25 9.72V16h19.5Z'/%3E%3C/svg%3E");
+}
+.socials a:hover{
+  color:#fff;
+  transform:translateY(-2px);
+  border-color:rgba(90,173,255,.56);
+  background:linear-gradient(180deg,rgba(18,42,75,.8),rgba(6,22,43,.68));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 14px 30px rgba(0,7,24,.3),
+    0 0 24px rgba(31,138,255,.16);
+}
+.socials a:hover::before{
+  box-shadow:
+    inset 0 0 0 1px rgba(151,210,255,.18),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 20px rgba(50,171,255,.24);
+}
+.socials a:focus-visible{
+  outline:none;
+  border-color:rgba(105,188,255,.78);
+  box-shadow:0 0 0 3px rgba(35,132,255,.18),0 0 24px rgba(31,138,255,.16);
+}
+
 /* Large laptops and tablets: reduce density before stacking. */
 @media (max-width:1100px){
   .shell{width:calc(100% - 48px)}
@@ -123,4 +212,7 @@ h2{font-size:clamp(36px,3.1vw,64px)}
   .heroart{min-height:420px}
   .heroimg{max-width:min(88vw,360px)}
   .cards4,.journey,.mern4,.skillgrid,.detail3{grid-template-columns:1fr}
+  .socials{gap:9px}
+  .socials a{min-height:42px;padding-right:13px;padding-left:10px}
+  .socials a::before{width:26px;height:26px;-webkit-mask-size:16px 16px;mask-size:16px 16px}
 }
