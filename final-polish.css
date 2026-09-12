@@ -1,0 +1,207 @@
+/* Final visual polish: consistency, spacing, focus states and responsive rhythm.
+   Hero + Navbar composition remains unchanged. */
+
+html{
+  scroll-padding-top:clamp(72px,5vw,92px);
+}
+body{
+  overflow-x:hidden;
+  background:#020a16;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+::selection{
+  color:#fff;
+  background:rgba(25,133,255,.72);
+}
+section[id]{
+  scroll-margin-top:clamp(72px,5vw,92px);
+}
+
+/* Keep every major section on the same vertical rhythm. */
+.section{
+  padding-block:clamp(84px,6.1vw,124px);
+}
+.section>.shell{
+  position:relative;
+}
+.section h2,
+.section h3{
+  text-wrap:balance;
+}
+.section .lead,
+.section p{
+  text-wrap:pretty;
+}
+
+/* Shared interactive language across the page. */
+.btn,
+.navcta{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;
+}
+.btn:hover,
+.navcta:hover{
+  transform:translateY(-2px);
+}
+.btn.primary:hover{
+  box-shadow:0 14px 36px rgba(14,116,255,.34),0 0 24px rgba(34,169,255,.12);
+}
+.btn.ghost:hover{
+  border-color:rgba(83,181,255,.46);
+  background:rgba(21,62,103,.30);
+  box-shadow:0 12px 30px rgba(0,7,24,.18),0 0 20px rgba(30,145,255,.08);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline:2px solid #39b8ff;
+  outline-offset:3px;
+}
+
+/* Slightly unify glass surface depth without flattening individual section identities. */
+#skills .mernbox,
+#journey .step,
+#projects .case,
+#contact .form{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.055),
+    0 24px 58px rgba(0,5,18,.24),
+    0 0 32px rgba(29,132,255,.05);
+}
+
+/* Make section transitions feel intentional on long pages. */
+#about,
+#skills,
+#journey,
+#projects,
+#contact{
+  box-shadow:inset 0 1px 0 rgba(91,171,255,.035);
+}
+
+/* Skills supporting cards keep equal visual weight. */
+#skills .skillgrid{
+  align-items:stretch;
+}
+#skills .skillgroup{
+  height:100%;
+}
+
+/* Journey card content alignment stays consistent even with different copy lengths. */
+#journey .step{
+  display:flex;
+  flex-direction:column;
+}
+#journey .step p{
+  margin-top:auto;
+}
+
+/* Featured project gets a little more breathing room between proof and explanation. */
+#projects .projectcopy .tags{
+  row-gap:10px;
+}
+#projects .detail3>div{
+  height:100%;
+}
+
+/* Contact form/button proportions match the rest of the site. */
+#contact .form .btn{
+  min-height:46px;
+  padding-inline:24px;
+}
+#contact .field input,
+#contact .field textarea{
+  caret-color:#42baff;
+}
+
+/* Footer becomes a cleaner visual landing point after the final section. */
+.footer .footin>div:first-child strong{
+  letter-spacing:-.01em;
+}
+.footer .footlinks a:not(:nth-last-child(-n+3)){
+  position:relative;
+}
+.footer .footlinks a:not(:nth-last-child(-n+3))::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-6px;
+  height:1px;
+  transform:scaleX(0);
+  transform-origin:center;
+  background:linear-gradient(90deg,transparent,#37b6ff,transparent);
+  transition:transform .22s ease;
+}
+.footer .footlinks a:not(:nth-last-child(-n+3)):hover::after{
+  transform:scaleX(1);
+}
+
+@media(max-width:1100px){
+  .section{
+    padding-block:clamp(78px,7vw,98px);
+  }
+  #skills .skillgroup,
+  #projects .detail3>div{
+    min-height:0;
+  }
+}
+
+@media(max-width:760px){
+  .section{
+    padding-block:72px;
+  }
+  .section .lead{
+    line-height:1.7;
+  }
+  .btn{
+    min-height:46px;
+  }
+  #projects .case{
+    margin-top:38px;
+  }
+  #contact .contactgrid{
+    gap:40px;
+  }
+  .footer{
+    padding-block:28px!important;
+  }
+}
+
+@media(max-width:620px){
+  html{
+    scroll-padding-top:70px;
+  }
+  section[id]{
+    scroll-margin-top:70px;
+  }
+  .section{
+    padding-block:66px;
+  }
+  .section .kicker{
+    letter-spacing:.18em;
+  }
+  #skills .mernbox,
+  #projects .case,
+  #contact .form{
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.05),
+      0 18px 42px rgba(0,5,18,.22),
+      0 0 24px rgba(29,132,255,.045);
+  }
+  .footer .footlinks{
+    row-gap:16px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+  }
+}
