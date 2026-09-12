@@ -47,18 +47,6 @@
     0 0 18px rgba(30,144,255,.08);
   overflow:hidden;
 }
-.brandplate::after{
-  content:"";
-  position:absolute;
-  width:5px;
-  height:5px;
-  right:5px;
-  bottom:5px;
-  border-radius:50%;
-  background:#39baff;
-  box-shadow:0 0 10px rgba(57,186,255,.72);
-  opacity:.80;
-}
 .brandplate img{
   display:block;
   width:100%;
