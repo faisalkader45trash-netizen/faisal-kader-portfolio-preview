@@ -72,11 +72,10 @@ textarea:focus-visible{
     0 0 32px rgba(29,132,255,.05);
 }
 
-/* Continuous section flow: remove hard seams and fade each edge toward the same deep navy. */
-.hero{
-  border-bottom:0!important;
-  box-shadow:inset 0 -78px 82px -82px rgba(2,10,22,.58);
-}
+/* Boundary-matched background blending.
+   Each section keeps its original visual identity, while its top and bottom
+   fade toward the exact neighbouring navy family instead of resetting abruptly. */
+.hero,
 .hero + .section,
 #about,
 #skills,
@@ -86,36 +85,74 @@ textarea:focus-visible{
   margin-top:-1px;
   border-top-color:transparent!important;
   border-bottom-color:transparent!important;
-  box-shadow:
-    inset 0 74px 78px -82px rgba(2,10,22,.52),
-    inset 0 -74px 78px -82px rgba(2,10,22,.52);
 }
+
+.hero{
+  border-bottom:0!important;
+  background-image:
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 120px),rgba(3,16,31,.38) calc(100% - 54px),#03101f 100%),
+    radial-gradient(circle at 72% 46%,rgba(0,102,255,.24),transparent 28%),
+    linear-gradient(135deg,#020914 0%,#061528 62%,#03101f 100%);
+}
+
 .hero + .section{
-  box-shadow:
-    inset 0 82px 86px -88px rgba(2,10,22,.58),
-    inset 0 -72px 76px -80px rgba(2,10,22,.48);
+  background-image:
+    linear-gradient(to bottom,#03101f 0%,rgba(3,16,31,.76) 36px,rgba(3,16,31,0) 118px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 118px),rgba(2,11,23,.48) calc(100% - 42px),#020b17 100%),
+    radial-gradient(circle at 12% 14%,rgba(18,124,255,.16),transparent 26%),
+    radial-gradient(circle at 88% 76%,rgba(0,158,255,.10),transparent 24%),
+    linear-gradient(135deg,#03101f 0%,#061628 52%,#04111f 100%);
 }
+
 #about{
-  box-shadow:
-    inset 0 72px 76px -80px rgba(2,10,22,.50),
-    inset 0 -72px 76px -80px rgba(2,10,22,.50);
+  background-image:
+    linear-gradient(to bottom,#020b17 0%,rgba(2,11,23,.74) 34px,rgba(2,11,23,0) 116px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 116px),rgba(3,16,31,.48) calc(100% - 40px),#03101f 100%),
+    radial-gradient(circle at 18% 34%,rgba(0,118,255,.13),transparent 26%),
+    radial-gradient(circle at 78% 64%,rgba(45,185,255,.075),transparent 24%),
+    linear-gradient(135deg,#020b17 0%,#061321 48%,#04101d 100%)!important;
 }
-#skills,
-#journey,
+
+#skills{
+  background-image:
+    linear-gradient(to bottom,#03101f 0%,rgba(3,16,31,.72) 34px,rgba(3,16,31,0) 116px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 116px),rgba(2,11,23,.48) calc(100% - 40px),#020b17 100%),
+    radial-gradient(circle at 18% 18%,rgba(20,126,255,.14),transparent 27%),
+    radial-gradient(circle at 82% 74%,rgba(0,170,255,.09),transparent 24%),
+    linear-gradient(135deg,#03101f 0%,#061526 50%,#04111f 100%);
+}
+
+#journey{
+  background-image:
+    linear-gradient(to bottom,#020b17 0%,rgba(2,11,23,.72) 34px,rgba(2,11,23,0) 116px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 116px),rgba(3,16,31,.48) calc(100% - 40px),#03101f 100%),
+    radial-gradient(circle at 14% 22%,rgba(19,124,255,.14),transparent 27%),
+    radial-gradient(circle at 88% 70%,rgba(0,172,255,.085),transparent 24%),
+    linear-gradient(135deg,#020b17 0%,#061321 50%,#04101d 100%)!important;
+}
+
 #projects{
-  box-shadow:
-    inset 0 70px 76px -80px rgba(2,10,22,.46),
-    inset 0 -70px 76px -80px rgba(2,10,22,.46);
+  background-image:
+    linear-gradient(to bottom,#03101f 0%,rgba(3,16,31,.72) 34px,rgba(3,16,31,0) 116px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 116px),rgba(2,11,23,.48) calc(100% - 40px),#020b17 100%),
+    radial-gradient(circle at 18% 18%,rgba(24,126,255,.14),transparent 27%),
+    radial-gradient(circle at 88% 76%,rgba(0,170,255,.085),transparent 24%),
+    linear-gradient(135deg,#03101f 0%,#061526 50%,#04111f 100%)!important;
 }
+
 #contact{
-  box-shadow:
-    inset 0 72px 78px -82px rgba(2,10,22,.48),
-    inset 0 -54px 62px -68px rgba(2,10,22,.40);
+  background-image:
+    linear-gradient(to bottom,#020b17 0%,rgba(2,11,23,.72) 34px,rgba(2,11,23,0) 116px),
+    linear-gradient(to bottom,transparent 0%,transparent calc(100% - 104px),rgba(5,12,22,.54) calc(100% - 34px),#050c16 100%),
+    radial-gradient(circle at 16% 20%,rgba(19,126,255,.14),transparent 28%),
+    radial-gradient(circle at 86% 76%,rgba(0,170,255,.085),transparent 24%),
+    linear-gradient(135deg,#020b17 0%,#061321 50%,#04101d 100%)!important;
 }
+
 .footer{
   margin-top:-1px;
-  border-top:1px solid rgba(78,158,238,.07)!important;
-  box-shadow:inset 0 24px 32px -36px rgba(20,83,140,.11);
+  border-top:1px solid rgba(78,158,238,.05)!important;
+  box-shadow:none;
 }
 
 /* Skills supporting cards keep equal visual weight. */
