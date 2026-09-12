@@ -89,13 +89,12 @@ textarea:focus-visible{
   height:100%;
 }
 
-/* Journey card content alignment stays consistent even with different copy lengths. */
+/* Journey keeps its original natural title-to-copy spacing. */
 #journey .step{
-  display:flex;
-  flex-direction:column;
+  display:block;
 }
 #journey .step p{
-  margin-top:auto;
+  margin-top:0;
 }
 
 /* Featured project gets a little more breathing room between proof and explanation. */
