@@ -1,0 +1,198 @@
+/* Phase 3: Skills & Technologies — premium dark MERN stack presentation. */
+#skills{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  color:#f7fbff;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(20,126,255,.14),transparent 27%),
+    radial-gradient(circle at 82% 74%,rgba(0,170,255,.09),transparent 24%),
+    linear-gradient(135deg,#03101f 0%,#061526 50%,#04111f 100%);
+  border-top:1px solid rgba(80,165,255,.09);
+  border-bottom:1px solid rgba(80,165,255,.09);
+}
+#skills::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-image:
+    linear-gradient(rgba(74,139,205,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(74,139,205,.035) 1px,transparent 1px);
+  background-size:36px 36px;
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.25));
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),rgba(0,0,0,.25));
+}
+#skills::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:clamp(430px,33vw,720px);
+  height:clamp(430px,33vw,720px);
+  right:-15%;
+  top:16%;
+  border-radius:50%;
+  border:1px solid rgba(44,167,255,.12);
+  box-shadow:0 0 90px rgba(0,110,255,.12),inset 0 0 110px rgba(0,114,255,.05);
+}
+#skills .shell{position:relative;z-index:2}
+#skills .kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:#2ca7ff;
+  font-weight:900;
+  letter-spacing:.24em;
+}
+#skills .kicker::after{
+  content:"";
+  width:clamp(62px,5vw,98px);
+  height:1px;
+  background:linear-gradient(90deg,#2ca7ff,transparent);
+}
+#skills h2{
+  max-width:920px;
+  margin:16px 0 18px;
+  color:#fff;
+  font-size:clamp(42px,3.35vw,68px);
+  line-height:.99;
+  letter-spacing:-.045em;
+}
+#skills .lead{
+  max-width:780px;
+  color:#b7c7d9;
+  font-size:clamp(16px,1vw,19px);
+  line-height:1.75;
+}
+#skills .mernbox{
+  margin-top:clamp(38px,3vw,58px);
+  padding:clamp(22px,1.8vw,34px);
+  border:1px solid rgba(73,166,255,.18);
+  border-radius:26px;
+  background:linear-gradient(145deg,rgba(12,38,68,.62),rgba(5,19,36,.56) 62%,rgba(4,15,29,.70));
+  -webkit-backdrop-filter:blur(16px) saturate(125%);
+  backdrop-filter:blur(16px) saturate(125%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.055),0 24px 56px rgba(0,5,18,.22),0 0 30px rgba(27,131,255,.055);
+}
+#skills .mern-label{
+  display:inline-flex;
+  align-items:center;
+  gap:11px;
+  color:#42b9ff;
+  font-size:clamp(12px,.76vw,14px);
+  letter-spacing:.17em;
+  font-weight:900;
+}
+#skills .mern-label::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#32afff;
+  box-shadow:0 0 14px rgba(50,175,255,.55);
+}
+#skills .mern4{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(14px,1.1vw,22px);
+  margin-top:22px;
+}
+#skills .mern-card{
+  position:relative;
+  overflow:hidden;
+  min-height:clamp(210px,14vw,280px);
+  padding:clamp(22px,1.6vw,30px);
+  border:1px solid rgba(80,167,255,.18);
+  border-radius:20px;
+  background:linear-gradient(150deg,rgba(17,47,82,.62),rgba(5,20,39,.58) 62%,rgba(4,15,30,.74));
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.055),0 16px 36px rgba(0,5,18,.20),0 0 26px rgba(31,133,255,.05);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,background .24s ease;
+}
+#skills .mern-card::after{
+  content:"";
+  position:absolute;
+  left:18%;
+  right:18%;
+  bottom:0;
+  height:2px;
+  transform:scaleX(.25);
+  background:linear-gradient(90deg,transparent,#2eaaff,#47d1ff,transparent);
+  box-shadow:0 0 14px rgba(45,177,255,.28);
+  transition:transform .25s ease;
+}
+#skills .mern-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(82,184,255,.48);
+  background:linear-gradient(150deg,rgba(20,58,101,.72),rgba(6,24,46,.66));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.075),0 22px 46px rgba(0,5,18,.27),0 0 32px rgba(36,145,255,.12);
+}
+#skills .mern-card:hover::after{transform:scaleX(1)}
+#skills .mern-logo{
+  width:clamp(68px,4.8vw,96px);
+  height:clamp(68px,4.8vw,96px);
+  object-fit:contain;
+  margin-bottom:20px;
+  filter:drop-shadow(0 0 16px rgba(52,177,255,.20));
+}
+#skills .mern-card strong{
+  color:#fff;
+  font-size:clamp(20px,1.3vw,25px);
+  letter-spacing:-.02em;
+}
+#skills .mern-card small{
+  margin-top:8px;
+  color:#8fa5bb;
+  font-size:clamp(12px,.75vw,14px);
+}
+#skills .skillgrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(14px,1.1vw,22px);
+  margin-top:clamp(22px,1.8vw,34px);
+}
+#skills .skillgroup{
+  padding:clamp(20px,1.5vw,28px);
+  border:1px solid rgba(86,160,235,.14);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(10,31,56,.50),rgba(5,18,34,.48));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+}
+#skills .skillgroup>strong{
+  display:block;
+  color:#dcecff;
+  margin-bottom:14px;
+  font-size:clamp(14px,.9vw,17px);
+}
+#skills .tags{display:flex;flex-wrap:wrap;gap:9px}
+#skills .tag{
+  border:1px solid rgba(77,159,240,.16);
+  background:rgba(8,26,48,.58);
+  color:#bcd0e4;
+  padding:8px 11px;
+  border-radius:10px;
+  font-size:clamp(11px,.7vw,13px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+  transition:border-color .2s ease,color .2s ease,background .2s ease,transform .2s ease;
+}
+#skills .tag:hover{
+  transform:translateY(-1px);
+  color:#f2f8ff;
+  border-color:rgba(73,176,255,.34);
+  background:rgba(13,42,73,.70);
+}
+@media(max-width:1100px){
+  #skills .mern4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #skills .skillgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  #skills h2{font-size:clamp(36px,10vw,44px)}
+  #skills .mernbox{padding:20px 16px;border-radius:21px}
+  #skills .mern4,#skills .skillgrid{grid-template-columns:1fr}
+  #skills .mern-card{min-height:190px}
+  #skills .mern-logo{width:74px;height:74px}
+}
