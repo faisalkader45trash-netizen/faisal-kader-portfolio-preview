@@ -4,6 +4,8 @@
 /* 901–1050px: remove the three-column collision by placing navigation
    on a compact second row while keeping Brand + CTA unchanged. */
 @media(max-width:1050px){
+  html{scroll-padding-top:118px}
+
   .navin{
     position:relative;
     grid-template-columns:minmax(0,1fr) auto!important;
@@ -71,6 +73,8 @@
 }
 
 @media(max-width:620px){
+  html{scroll-padding-top:112px}
+
   .navin{
     padding-top:7px;
     padding-bottom:6px;
