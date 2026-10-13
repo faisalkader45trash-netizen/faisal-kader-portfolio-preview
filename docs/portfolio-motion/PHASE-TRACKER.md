@@ -22,7 +22,7 @@
 | P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live remote content extraction VERIFIED; Python Playwright local synthetic page works but live domain DNS blocked; no live screenshots/metrics | Retry only when a supported browser path is available; do not invent results |
 | P00-05 | 00 | Close Phase 00 baseline for owner's current deployed portfolio | BLOCKED | Operational canonical live site VERIFIED via GitHub+Render; P00-04 true browser QA pending | Finish visual/interaction baseline; no unrelated local ZIP prerequisite |
 | P01-00 | 01 (exploration only) | Three isolated Hero concept directions: Signal, Atlas, Studio | TESTED (LOCAL PROTOTYPE ONLY) | `PHASE-01-CONCEPT-STUDIES.md`; 1440px/390px browser tests; no production changes | Owner selects/revises a direction; do not promote to code |
-| P01-02 | 01 (proposal only) | Fourth direction **The Build Trace**: one request → UI → API → Validation → Database → Admin, with linked code evidence | PROPOSED / OWNER REVIEW | [PHASE-01-DIRECTION-04-PROPOSAL.md](./PHASE-01-DIRECTION-04-PROPOSAL.md); 3 prototype source and 6 images + current Think Different MERN repo files inspected | Await owner concept decision; no production implementation |
+| P01-02 | 01 (isolated prototype only) | The Build Trace: editable sample → API → validation → MongoDB model → admin view | TESTED (LOCAL PROTOTYPE ONLY) / OWNER VISUAL REVIEW PENDING | [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md); 5 viewport tests, Run/Pause, keyboard, reduced motion, 0 simulated API submissions | Owner reviews standalone HTML; do not implement or deploy |
 | P01-01 | 01 | Approved visual direction and production-ready signature storyboards | TODO | Phase 00 live browser QA still blocked; P01-00 awaits owner choice | After owner selection and further evidence, request specific implementation approval |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
@@ -64,6 +64,13 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - [The Build Trace — Phase 01 fourth direction](./PHASE-01-DIRECTION-04-PROPOSAL.md): a source-backed, one-scenario interactive request trace. Status **PROPOSED / OWNER REVIEW**, not tested as a fourth prototype.
 - GitHub Think Different code paths inspected: inquiry UI, route, Zod validation, Mongoose model and admin table. Code existence does **not** establish live app functionality.
 - No production edits, no merge, no Render deploy.
+
+## Direction 04 — prototype QA completed (2026-10-13)
+
+- Owner authorized an **isolated** animated prototype, explicitly not production changes.
+- [Direction 04 QA Evidence](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md) documents 1440, 1024, 768, 390, 320px browser tests, valid/invalid sample, reset, source links, focus, keyboard, reduced motion, Run/Pause and zero observed simulated API POSTs.
+- The standalone prototype HTML and screenshot artifacts exist in the current conversation, **not in the production repo**. External logo/font loading and production responsiveness remain unverified.
+- **P01-02 locally TESTED, owner visual review pending**; Phase 00 live browser baseline remains BLOCKED. No merge/deploy.
 
 ## Current stop condition
 
