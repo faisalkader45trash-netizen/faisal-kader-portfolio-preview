@@ -18,8 +18,8 @@
 | DOC-01 | Documentation | Plan, research, tracker and decisions saved and read back on docs-only branch | VERIFIED | GitHub readback of four files; main-vs-branch diff contains docs only | Keep docs branch isolated; no merge |
 | P00-01 | 00 | GitHub/Render static preview source and live deploy mapping | VERIFIED | `PHASE-00-BASELINE.md` sections A/B; commit `1198882` matches Render latest live deploy | Re-check on future release |
 | P00-02 | 00 | Historical React/Vite implementation (separate from current live site) | NOT REQUIRED | Verified current Render target is static repo; local React snapshot is historical only | Revisit only for explicitly proposed migration or if a reachable source is discovered independently |
-| P00-03 | 00 | Source-level audit of HTML/CSS/JS, theme, motion, links and claims | VERIFIED | `PHASE-00-BASELINE.md` B/C and follow-up: labels, 15 image alts, all anchor IDs, contrast token pairs | Complete computed-style/browser behavior checks under P00-04 |
-| P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live remote content extraction VERIFIED; local DNS failure, Playwright CLI absent; remote browser unavailable; no screenshots/metrics | Retry only when a supported browser path is available; do not invent results |
+| P00-03 | 00 | Source-level audit of HTML/CSS/JS, theme, motion, links and claims | VERIFIED | `PHASE-00-BASELINE.md` B/C and follow-up: labels, 15 image alts, all anchor IDs, contrast token pairs | A11Y-01/A11Y-02/FUNC-01 documented in baseline; complete live visual/browser checks under P00-04 |
+| P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live remote content extraction VERIFIED; Python Playwright local synthetic page works but live domain DNS blocked; no live screenshots/metrics | Retry only when a supported browser path is available; do not invent results |
 | P00-05 | 00 | Close Phase 00 baseline for owner's current deployed portfolio | BLOCKED | Operational canonical live site VERIFIED via GitHub+Render; P00-04 true browser QA pending | Finish visual/interaction baseline; no unrelated local ZIP prerequisite |
 | P01-01 | 01 | 2 visual directions and signature storyboards | TODO | Requires owner approval of Phase 00 result | Design only; owner selects one |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO | Approved Phase 01 | Small isolated implementation + regression QA |
@@ -44,6 +44,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - The 7 existing section/anchor IDs match their internal href targets in HTML source; 15 images have alt attributes. Form label associations are absent, and the send button lacks an apparent handler.
 - Exact opaque-token contrast includes Teal-on-Ink **2.90:1** (a theoretical pair needing actual computed-style verification). See [PHASE-00-BASELINE.md](./PHASE-00-BASELINE.md).
 - Visual/interaction browser testing is still **BLOCKED**; remote text extraction is not a screenshot or functional test.
+
+## Browser and semantic evidence follow-up
+
+- Local Chromium + Python Playwright ran a **synthetic** HTML page; direct live navigation failed DNS, so no live screenshot or responsive evidence exists.
+- Actual source confirms no main landmark or skip link, four unassociated form labels, and unimplemented contact submission. Internal fragment IDs match and 15 images declare alt attributes.
+- Correction: mobile menu **does** call `button.focus()` on Escape; prior generic assertion about missing focus management was incomplete. See [Phase 00 follow-up](./PHASE-00-BASELINE.md).
 
 ## Current stop condition
 
