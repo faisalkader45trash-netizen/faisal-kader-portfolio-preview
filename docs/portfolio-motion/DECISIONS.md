@@ -39,3 +39,11 @@
 ## Update rules
 
 Append a dated, numbered entry for each future change in direction, rejected alternative, dependency adoption, accepted performance tradeoff and owner sign-off. Link task IDs and commit/PR evidence. A written decision is not evidence that a test passed.
+
+## 2026-10-13 — D-005: Phase 00 partial audit boundary
+
+**Verified:** `main` SHA `1198882ba38ec50a81551be03b7f7de7ee68aa23` is the source of the Render public static preview. Read-only audit of 14 linked CSS files, index.html and mobile-nav.js completed; findings are in [PHASE-00-BASELINE.md](./PHASE-00-BASELINE.md). GitHub source and provider live status were confirmed.
+
+**Unverified / blocked:** Current historical local React/Vite worktree is not available here; connected GitHub account list has no separate `faisal-portfolio` repo. Container's live-site DNS resolution fails and no Playwright CLI/package is installed; a remote extractor confirmed text/links but not screenshots or interaction. Therefore Phase 00 remains **PARTIAL**, canonical long-term codebase remains **UNRESOLVED**, and no feature implementation is permitted yet.
+
+**Next decision owner input:** Provide access to current local React source or explicitly identify intended target; enable a permissible browser visual baseline. Do not infer the locally historical failure or current CSS visual outcome without evidence.
