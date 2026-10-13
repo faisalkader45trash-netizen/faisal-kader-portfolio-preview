@@ -30,7 +30,7 @@
 | BT-04 | 03 integration | Accessible motion, keyboard and reduced-motion | NOT STARTED | Implementation plan Task 4; QA | Do not edit now |
 | BT-05 | QA | Responsive/integrity/performance regression evidence | NOT STARTED | Implementation plan Task 5; Phase 00 baseline | Do not mark verified until executed |
 | BT-06 | Release | Explicitly approved merge, Render smoke and rollback record | NOT STARTED / RELEASE AUTHORIZATION NOT GRANTED | Implementation plan Task 6, separate release approval | Do not merge or deploy |
-| P01-04 | 01 (placement planning only) | Preserve original Hero portrait/MERN cards with Build Trace composition | LOCAL PLACEMENT TESTED / OWNER LAYOUT REVIEW PENDING | [Placement QA](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): 1440, 1024, 768, 390, 320px, no overflow/pageerror/POST in tested flows | Owner approves/revises layout and exact future file scope; no implementation now |
+| P01-04 | 01 (placement planning only) | Original Hero + large Build Trace/form right panel and portrait supporting band | **REJECTED BY OWNER** despite LOCAL TEST PASS | [Visual critique](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md) uses actual 1440/390 screenshots and source; user says whole composition does not feel like a landing page | STOP this composition; propose a fundamentally different landing-first visual direction; no production code |
 | P01-01 | 01 | Build Trace direction + real-Hero placement study | DIRECTION APPROVED / ISOLATED PLACEMENT TESTED / LAYOUT APPROVAL PENDING | [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): source-derived layout, 5 local viewport screenshots; original Cloudinary images offline unavailable | Owner reviews proposed positioning, file allowlist and separate theme gate before code authorization |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO — SEPARATE APPROVAL REQUIRED | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
@@ -93,6 +93,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md) records source-derived original Hero copy/CTA, original Cloudinary image URLs and all four floating-card assets, desktop split + lower asset band, mobile intro → trace → asset band.
 - Standalone review HTML and five **local** screenshots shared in conversation, NOT stored in GitHub `main`. Offline screenshot font/photo/icons cannot be judged as final source rendering.
 - P01-04 tested LOCALLY; **user layout/code-scope approval pending**. BT-01…BT-06 remain NOT STARTED. Phase 00 true live browser baseline still BLOCKED.
+
+## 2026-10-13 — Owner rejects reviewed placement
+
+- The user explicitly rejected the **entire existing composition**, saying it does not feel like a landing page. Local functionality checks remain true but do not override visual failure.
+- [Evidence-based screenshot critique](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md): inspected 1440px desktop and 390px mobile screenshots; Hero became a dashboard/form, portrait moved below the main moment, client-facing copy was littered with QA/status labels.
+- **P01-04 REJECTED; prior Build Trace integration plan must not be executed unchanged.** Direction 04 core idea is not automatically rejected; a new landing-first Hero art direction is necessary before any source edits.
 
 ## Current stop condition
 
