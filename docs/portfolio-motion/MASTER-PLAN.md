@@ -86,3 +86,9 @@ A visitor can opt to explore a conceptual workflow: a business requirement is ma
 - Optional `PHASE-00-BASELINE.md`: read-only audit findings and verification outcomes
 
 Documents are staged in `docs/portfolio-motion/` on the **documentation branch only**. A documentation branch is not the production branch; no merger/Render trigger is authorized by approval of this plan.
+
+## Authorization updates after initial v2.0 approval (chronological, not retroactive)
+
+- **2026-10-13:** Owner approved Direction 04 proposal for **isolated prototype**, without permission to edit production.
+- **2026-10-13:** Owner approved the resulting isolated prototype's **visual direction** and requested detailed live integration planning, risks and test requirements. See [Decisions D-011](./DECISIONS.md) and [Integration Plan](./PHASE-01-DIRECTION-04-INTEGRATION-PLAN.md).
+- **Authorization currently valid:** read-only verification and documentation planning on `docs/portfolio-motion-master-plan-v2` ONLY. **No production code change, merge or deploy permitted** until separate explicit approval. Phase 00 actual live-browser visual/performance baseline still BLOCKED.
