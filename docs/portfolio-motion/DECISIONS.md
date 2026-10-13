@@ -47,3 +47,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Unverified / blocked:** Current historical local React/Vite worktree is not available here; connected GitHub account list has no separate `faisal-portfolio` repo. Container's live-site DNS resolution fails and no Playwright CLI/package is installed; a remote extractor confirmed text/links but not screenshots or interaction. Therefore Phase 00 remains **PARTIAL**, canonical long-term codebase remains **UNRESOLVED**, and no feature implementation is permitted yet.
 
 **Next decision owner input:** Provide access to current local React source or explicitly identify intended target; enable a permissible browser visual baseline. Do not infer the locally historical failure or current CSS visual outcome without evidence.
+
+## 2026-10-13 — D-006: No unnecessary source-upload requirement
+
+**Decision:** The user's explicitly named, currently deployed Render website is the operational target. Live GitHub `main` and Render metadata independently identify its public source. The existence or availability of a historical local React/Vite experiment is **not a prerequisite** to continuing the approved Phase 00 audit of the public website. Do not ask the owner to find or zip a folder already unnecessary for the target task.
+
+**Evidence:** GitHub `main` SHA `1198882...`; Render service `srv-daih6ntg1s2s73favnt0` auto-deploys `main`; read-only remote live-content fetch succeeded. Browser screenshots/performance are still unverified due to execution-tool/network constraints. The source-level findings are appended to `PHASE-00-BASELINE.md`.
+
+**Approval boundary:** No authorization to change production implementation, merge, deploy or start Phase 01; continue evidence gathering only.
