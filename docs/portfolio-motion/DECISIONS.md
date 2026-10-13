@@ -63,3 +63,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Source correction:** Mobile menu Escape handler actually calls `button.focus()`; don't claim it has no focus handling. Contact form's absent delivery handler and unassociated labels, no `<main>` landmark or skip link, and structurally valid fragment hrefs are documented in the baseline report.
 
 **Status:** P00-04 blocked on actual live browser recording. Main and Render unchanged. Phase 01 design/implementation not authorized.
+
+## 2026-10-13 — D-008: Isolated Hero design exploration, no production implementation
+
+**Context:** After the Phase 00 source audit, user asked to continue work. Three genuinely different **isolated local Hero prototypes** were created and browser-tested: Signal (idea-to-application sequence), Atlas (connected stack architecture), Studio (conceptual business-app canvas). The preview and six local screenshots were shared through the conversation, not deployed or committed to `main`.
+
+**Evidence:** [PHASE-01-CONCEPT-STUDIES.md](./PHASE-01-CONCEPT-STUDIES.md). Local Chromium/Playwright verified user clicks at 1440px and 390px, keyboard variant shortcut and reduced-motion duration with no observed runtime errors/overflow in tested cases; original external fonts/logo and the current live site's performance could not be verified in the isolated runtime.
+
+**Decision status:** THREE CANDIDATES / OWNER CHOICE PENDING. No direction selected, no implementation phase approved, Phase 00 visual gate still blocked. Absolutely no merge, production edits or Render deployment.
