@@ -87,3 +87,15 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Executed:** Created self-contained HTML concept in chat artifact, with editable local sample form, five-step architecture inspection, GitHub source evidence links, simulated validation and admin view, Run/Pause/Reset and reduced-motion alternative. Tested five viewport widths (1440/1024/768/390/320), keyboard navigation, valid/invalid inputs, sample value propagation, and confirmed no observed API POST request. Visual screenshots captured locally using Chromium/Playwright with offline font fallback; see [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md).
 
 **Status:** LOCAL PROTOTYPE TESTED; owner visual/design approval of the actual prototype is **pending**. This does not satisfy the separate blocked Phase 00 live-website browser audit and does not authorize merging/deployment or implementing live features.
+
+## 2026-10-13 — D-011: Owner approves prototype visual direction; integration plan permitted, code NOT permitted
+
+**User authorization:** "The Build Trace Direction 04 isolated prototype-এর visual direction অনুমোদন করছি। এখন live portfolio integration-এর detailed implementation plan, risk assessment ও test requirements তৈরি করো। production code পরিবর্তনের আগে আবার অনুমোদন নেবে।"
+
+**Interpretation:** Approved design direction and documentation planning only. Does **not** approve actual integration, any existing CSS refactor, merge, Render deployment, React migration, unrelated contact form changes or alterations to separate Think Different MERN codebase.
+
+**Planning documents:** [Integration Plan](./PHASE-01-DIRECTION-04-INTEGRATION-PLAN.md), [Risk Register](./PHASE-01-DIRECTION-04-INTEGRATION-RISKS.md), [Test Matrix](./PHASE-01-DIRECTION-04-INTEGRATION-TESTS.md).
+
+**Verified current target:** `main` `1198882ba38ec50a81551be03b7f7de7ee68aa23`, static `index.html` Hero with `.heroart` original portrait and four MERN floating cards, 14 CSS stylesheets and standalone `mobile-nav.js`. Planned new files `build-trace.css`, `build-trace.js`, `qa/build_trace/*` are **NOT CREATED** in production. Current `P00-04` real live-site browser baseline remains BLOCKED; isolated prototype QA is not a production pass.
+
+**Separate pending approvals:** (1) exact file-level implementation scope, image/card placement and test conditions; (2) after implementation tests, a separate specific PR-to-main merge/deploy release authorization. Owner review gate applies at both stages. Document-only branch stays isolated.
