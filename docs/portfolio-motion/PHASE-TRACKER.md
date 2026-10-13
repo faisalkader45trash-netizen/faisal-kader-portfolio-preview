@@ -21,7 +21,8 @@
 | P00-03 | 00 | Source-level audit of HTML/CSS/JS, theme, motion, links and claims | VERIFIED | `PHASE-00-BASELINE.md` B/C and follow-up: labels, 15 image alts, all anchor IDs, contrast token pairs | A11Y-01/A11Y-02/FUNC-01 documented in baseline; complete live visual/browser checks under P00-04 |
 | P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live remote content extraction VERIFIED; Python Playwright local synthetic page works but live domain DNS blocked; no live screenshots/metrics | Retry only when a supported browser path is available; do not invent results |
 | P00-05 | 00 | Close Phase 00 baseline for owner's current deployed portfolio | BLOCKED | Operational canonical live site VERIFIED via GitHub+Render; P00-04 true browser QA pending | Finish visual/interaction baseline; no unrelated local ZIP prerequisite |
-| P01-01 | 01 | 2 visual directions and signature storyboards | TODO | Requires owner approval of Phase 00 result | Design only; owner selects one |
+| P01-00 | 01 (exploration only) | Three isolated Hero concept directions: Signal, Atlas, Studio | TESTED (LOCAL PROTOTYPE ONLY) | `PHASE-01-CONCEPT-STUDIES.md`; 1440px/390px browser tests; no production changes | Owner selects/revises a direction; do not promote to code |
+| P01-01 | 01 | Approved visual direction and production-ready signature storyboards | TODO | Phase 00 live browser QA still blocked; P01-00 awaits owner choice | After owner selection and further evidence, request specific implementation approval |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
 | P04-01 | 04 | Service cards and MERN stack interactions | TODO | Verified hero style and approach | Review purposeful interaction |
@@ -50,6 +51,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - Local Chromium + Python Playwright ran a **synthetic** HTML page; direct live navigation failed DNS, so no live screenshot or responsive evidence exists.
 - Actual source confirms no main landmark or skip link, four unassociated form labels, and unimplemented contact submission. Internal fragment IDs match and 15 images declare alt attributes.
 - Correction: mobile menu **does** call `button.focus()` on Escape; prior generic assertion about missing focus management was incomplete. See [Phase 00 follow-up](./PHASE-00-BASELINE.md).
+
+## Isolated design prototype status (not a phase advance)
+
+- [PHASE-01-CONCEPT-STUDIES.md](./PHASE-01-CONCEPT-STUDIES.md) — Three working local Hero directions, two viewport sizes, reduced-motion/keyboard test outcomes, limitations and user selection gate.
+- Standalone HTML and 6 screenshots were delivered as chat artifacts only; **not production code** and **not a live-site visual baseline**.
+- P01-00 design exploration has been TESTED locally but P01-01 remains TODO. Phase 00 live browser QA remains BLOCKED.
 
 ## Current stop condition
 
