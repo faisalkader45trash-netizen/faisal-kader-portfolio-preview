@@ -107,3 +107,13 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Verified evidence:** GitHub current published `main` `1198882ba38ec50a81551be03b7f7de7ee68aa23` contains original `#home` copy, exact CTA/social targets, existing portrait and four MERN floating cards. Created `faisal-build-trace-hero-placement-review.html` in conversation only, with desktop left intro/right trace/lower original-asset band and mobile intro → trace → portrait/cards. Ran offline Playwright at 1440, 1024, 768, 390, 320px without horizontal overflow/page errors/POST in tested interactions; source image URLs preserved but Cloudinary and Google Fonts not loaded in that sandbox. See [placement review/QA](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md).
 
 **Status:** LOCAL PLACEMENT TESTED / OWNER LAYOUT & EXACT CODE-SCOPE APPROVAL PENDING. No integration branch or production changes; later merge/deploy separately gated.
+
+## 2026-10-13 — D-013: Owner rejected the entire Hero placement composition
+
+**User feedback:** Current overall setup does not look like a proper landing page and feels odd. User explicitly challenged prior visual review quality.
+
+**Assessment evidence:** Direct inspection of actual 1440px and 390px *isolated offline review screenshots* and source. Hero right-side sample form + admin-like inspector dominates; original portrait/identity moved below; status/QA labels visible to consumers; too many competing actions and similar small cards. Detailed critique in [PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md). Offline screenshot could not render source Cloudinary image/fonts; critique does not claim actual live screenshot coverage or run a paid automated detector.
+
+**Decision:** Mark P01-04 **REJECTED BY OWNER** despite technical local test passes. Suspend its integration execution plan. Keep the *underlying optional Build Trace explanatory concept* separate from its failed Hero packaging. Next work should propose a genuinely different, landing-first composition, not add more cards/animation to the rejected one.
+
+**Authorization:** No production code changes, no GitHub main merge or Render deployment. Documentation status updated only.
