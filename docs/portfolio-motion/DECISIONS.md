@@ -55,3 +55,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Evidence:** GitHub `main` SHA `1198882...`; Render service `srv-daih6ntg1s2s73favnt0` auto-deploys `main`; read-only remote live-content fetch succeeded. Browser screenshots/performance are still unverified due to execution-tool/network constraints. The source-level findings are appended to `PHASE-00-BASELINE.md`.
 
 **Approval boundary:** No authorization to change production implementation, merge, deploy or start Phase 01; continue evidence gathering only.
+
+## 2026-10-13 — D-007: QA evidence boundary and source correction
+
+**Decision:** Continue Phase 00 source audits only. The local Chromium/Playwright smoke check confirms synthetic pages can render, **not** the real Render site. Live hostname DNS resolution is unavailable here. Do not mark visual, responsive, functional, accessibility-tree or performance checks completed. Do not spend credits on the unavailable metered browser account.
+
+**Source correction:** Mobile menu Escape handler actually calls `button.focus()`; don't claim it has no focus handling. Contact form's absent delivery handler and unassociated labels, no `<main>` landmark or skip link, and structurally valid fragment hrefs are documented in the baseline report.
+
+**Status:** P00-04 blocked on actual live browser recording. Main and Render unchanged. Phase 01 design/implementation not authorized.
