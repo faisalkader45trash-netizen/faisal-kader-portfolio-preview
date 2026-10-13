@@ -99,3 +99,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Verified current target:** `main` `1198882ba38ec50a81551be03b7f7de7ee68aa23`, static `index.html` Hero with `.heroart` original portrait and four MERN floating cards, 14 CSS stylesheets and standalone `mobile-nav.js`. Planned new files `build-trace.css`, `build-trace.js`, `qa/build_trace/*` are **NOT CREATED** in production. Current `P00-04` real live-site browser baseline remains BLOCKED; isolated prototype QA is not a production pass.
 
 **Separate pending approvals:** (1) exact file-level implementation scope, image/card placement and test conditions; (2) after implementation tests, a separate specific PR-to-main merge/deploy release authorization. Owner review gate applies at both stages. Document-only branch stays isolated.
+
+## 2026-10-13 — D-012: Isolated real-Hero placement proposal ready; no production edits
+
+**Authorization interpretation:** User requested the planned next task ("ok koro") after a status indicating the next step is verifying placement of existing portrait/MERN floating cards and obtaining separate production implementation approval. Per explicit prior user boundary, this authorizes **placement study and planning**, **not** code edits, merging or Render deployment.
+
+**Verified evidence:** GitHub current published `main` `1198882ba38ec50a81551be03b7f7de7ee68aa23` contains original `#home` copy, exact CTA/social targets, existing portrait and four MERN floating cards. Created `faisal-build-trace-hero-placement-review.html` in conversation only, with desktop left intro/right trace/lower original-asset band and mobile intro → trace → portrait/cards. Ran offline Playwright at 1440, 1024, 768, 390, 320px without horizontal overflow/page errors/POST in tested interactions; source image URLs preserved but Cloudinary and Google Fonts not loaded in that sandbox. See [placement review/QA](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md).
+
+**Status:** LOCAL PLACEMENT TESTED / OWNER LAYOUT & EXACT CODE-SCOPE APPROVAL PENDING. No integration branch or production changes; later merge/deploy separately gated.
