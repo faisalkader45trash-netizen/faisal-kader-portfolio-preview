@@ -30,7 +30,8 @@
 | BT-04 | 03 integration | Accessible motion, keyboard and reduced-motion | NOT STARTED | Implementation plan Task 4; QA | Do not edit now |
 | BT-05 | QA | Responsive/integrity/performance regression evidence | NOT STARTED | Implementation plan Task 5; Phase 00 baseline | Do not mark verified until executed |
 | BT-06 | Release | Explicitly approved merge, Render smoke and rollback record | NOT STARTED / RELEASE AUTHORIZATION NOT GRANTED | Implementation plan Task 6, separate release approval | Do not merge or deploy |
-| P01-01 | 01 | Selected signature direction and reviewed layout storyboards | VISUAL DIRECTION APPROVED / EXACT LIVE HERO PLACEMENT PENDING | Build Trace prototype visual direction owner-approved; current Hero portrait/floating-card placement not yet reviewed in live context | Approve placement + Phase 02 dependency before implementation |
+| P01-04 | 01 (placement planning only) | Preserve original Hero portrait/MERN cards with Build Trace composition | LOCAL PLACEMENT TESTED / OWNER LAYOUT REVIEW PENDING | [Placement QA](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): 1440, 1024, 768, 390, 320px, no overflow/pageerror/POST in tested flows | Owner approves/revises layout and exact future file scope; no implementation now |
+| P01-01 | 01 | Build Trace direction + real-Hero placement study | DIRECTION APPROVED / ISOLATED PLACEMENT TESTED / LAYOUT APPROVAL PENDING | [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): source-derived layout, 5 local viewport screenshots; original Cloudinary images offline unavailable | Owner reviews proposed positioning, file allowlist and separate theme gate before code authorization |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO — SEPARATE APPROVAL REQUIRED | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
 | P04-01 | 04 | Service cards and MERN stack interactions | TODO | Verified hero style and approach | Review purposeful interaction |
@@ -86,6 +87,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - [Risk Register](./PHASE-01-DIRECTION-04-INTEGRATION-RISKS.md) — severity/likelihood estimates, tests and release blockers.
 - [Test Matrix](./PHASE-01-DIRECTION-04-INTEGRATION-TESTS.md) — proposed browser, accessibility, privacy, responsive, performance and release gates; **none run on integration**.
 - Pending separate authorization for code-change scope, placement of the existing Hero portrait and MERN cards, and before/after visual baseline.
+
+## Exact Hero placement prepared — 2026-10-13
+
+- [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md) records source-derived original Hero copy/CTA, original Cloudinary image URLs and all four floating-card assets, desktop split + lower asset band, mobile intro → trace → asset band.
+- Standalone review HTML and five **local** screenshots shared in conversation, NOT stored in GitHub `main`. Offline screenshot font/photo/icons cannot be judged as final source rendering.
+- P01-04 tested LOCALLY; **user layout/code-scope approval pending**. BT-01…BT-06 remain NOT STARTED. Phase 00 true live browser baseline still BLOCKED.
 
 ## Current stop condition
 
