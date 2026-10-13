@@ -1,6 +1,6 @@
 # Phase 01 — Direction 04 Proposal: THE BUILD TRACE
 
-**Status:** PROPOSED — AWAITING OWNER DIRECTION APPROVAL  
+**Status:** CONCEPT APPROVED FOR ISOLATED PROTOTYPE / LOCALLY TESTED / AWAITING OWNER VISUAL REVIEW  
 **Date:** 2026-10-13  
 **Scope:** Hero-level creative direction only; implementation and release NOT APPROVED  
 **Branch:** `docs/portfolio-motion-master-plan-v2` (documentation only)
@@ -78,8 +78,8 @@ All references are in `faisalkader45trash-netizen/think-different-automation-mer
 
 ## 6. Acceptance gate and next step
 
-**Current decision required:** Owner reviews the single new direction and decides **APPROVE CONCEPT**, **REQUEST REVISIONS**, or **REJECT**.
+**2026-10-13 decision:** Owner approved the Direction 04 concept for an isolated interactive prototype. A standalone HTML version was built and locally tested; see [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md). Owner **visual review of the built prototype** is still required; concept approval is **not** approval to integrate or release.
 
-If approved: build an **isolated standalone clickable Direction 04 prototype** and test desktop/mobile, keyboard, reduced motion, sample-data labelling, source links and browser errors. This is distinct from approval to modify production code. The existing Phase 00 live-site browser baseline remains unverified and must be completed before actual release decisions.
+Isolated prototype built and tested in local Chromium at five viewports, keyboard/reduced-motion interactions and source evidence links. The HTML remains a conversation artifact; no production code was changed. The existing Phase 00 live-site browser baseline remains unverified and must be completed before actual release decisions.
 
 **Do not implement on `main`; do not merge, deploy, purchase assets, install a React-only library or submit a real inquiry.**
