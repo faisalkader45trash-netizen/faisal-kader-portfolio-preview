@@ -25,7 +25,7 @@
 | **Historical local React/Vite** | Historical path `F:\Adobe Stock\Mern Stack Developer\Faisal Kader MERN Full Stack Developer Portfolio Landing Page\faisal-portfolio` | HISTORICAL ONLY | BLOCKED until user supplies current worktree/repo and tests |
 | **Creative/static other repo** | `endless-creativity-portfolio` is a distinct user repo | VERIFIED repository listing only | Not interchangeable with either canonical candidate |
 
-**Do not implement on the static preview by default until owner and a current local React source comparison resolve the long-term canonical target.** The public Render deployment accurately represents the static preview; it is not a MERN runtime.
+**Operational target for this audit:** The owner's directly named and verified live Render website is the current target, with `faisal-kader-portfolio-preview/main` its proven deployed source. The historical local React/Vite version remains an unverified *separate* artifact, not a reason to ask the owner for a ZIP or hold up auditing the current live website. Any future framework migration or replacing the deployed source is a separate owner decision. The static preview is not a MERN runtime.
 
 ## B. Source-level UI and motion baseline
 
@@ -70,11 +70,48 @@
 
 ## E. Priorities and recommended next actions — no implementation permission
 
-1. **P00-02:** User provides current React/Vite `faisal-portfolio` project source or confirms which repository is the intended canonical future implementation. Compare commits, package versions, tests and current UI before targeting code.
+1. **P00-02:** Treat the verified Render/GitHub static preview as the operational source for the owner's *current live website*. Independently investigate any other accessible React version only if it becomes relevant to a future migration; **do not ask the owner for ZIP files as a default requirement**.
 2. **P00-04:** Use a permitted browser runtime to capture desktop/mobile screenshots, inspect computed CSS and font loading, test navigation (without sending email), and record performance/console data. Retain measured results.
 3. **P00-03 detail:** Build minimal visual/style inventory after screenshot: dark-surface coverage, heading contrast, duplicate CSS origin, hover behavior and mobile states. This is diagnostic only.
-4. **P00-05:** Reconcile public deployed preview with current local React source. Produce recommendation to the owner, then seek separate Phase 01 approval.
+4. **P00-05:** Close the current-live-preview baseline when real browser visual/interaction evidence becomes available. Record local React/Vite as a separate optional source, not a prerequisite for auditing the live preview. Seek Phase 01 approval separately.
 
 ## Stop condition
 
-**Phase 00 cannot be CLOSED** without canonical source resolution and meaningful visual/interaction baseline. Current code-only tasks may be marked VERIFIED within their limited scope. No production code was changed, and no Render deploy was initiated by this audit.
+**Phase 00 cannot be CLOSED** without a meaningful visual/interaction baseline of the verified *current live* portfolio. The optional local React/Vite artifact does not block treating the verified GitHub/Render preview as the target. Current code-only tasks may be marked VERIFIED within their limited scope. No production code was changed, and no Render deploy was initiated by this audit.
+
+## 2026-10-13 — Follow-up verification (read-only, source-based)
+
+**Purpose:** Continue without requesting user-controlled files that are unnecessary to audit the verified live portfolio. No product code, production branch or Render configuration was changed.
+
+### Refreshed external evidence
+
+- GitHub `main` is still `1198882ba38ec50a81551be03b7f7de7ee68aa23`.
+- Render service `srv-daih6ntg1s2s73favnt0` still tracks `main`; latest reported deployment remains `dep-db6vsm3m8hqs73f4n65g` with provider status `live` at that commit.
+- Read-only remote content fetch of the public Render URL **succeeded** and returned document title `Faisal Kader — MERN Full Stack Developer`, navigation/text and six unique image asset URLs. This proves readable public content through that fetch provider, not screenshot correctness, working links, decoded images or Core Web Vitals.
+- Current local sandbox can run Chromium and has Python `playwright` installed, but local DNS lookups for the live site and GitHub fail; Playwright CLI is not installed. The remote browser automation connector's current state does not permit a run. Thus screenshots, computed styles, keyboard/touch interaction and performance recordings **remain untested**, rather than declared passed.
+
+### Current source-level assertions verified from `main/index.html` and `main/mobile-nav.js`
+
+| Check | Actual result | Classification |
+| --- | --- | --- |
+| Anchor IDs / fragment hrefs | IDs `home/about/skills/journey/projects/case/contact` exist; every internal fragment href has a matching ID in the same HTML | VERIFIED source structure; actual click/scroll behavior NOT TESTED |
+| Image alt attributes | All 15 `<img>` tags declare `alt` | VERIFIED presence; alt *quality* and actual loading not evaluated |
+| Contact form delivery | One `<form class="form">`, 4 form controls (3 input + textarea), button `type="button"`, no visible submission JS apart from unrelated `mobile-nav.js` | VERIFIED **no apparent submit path** in this published source; actual delivery NOT VERIFIED |
+| Form labels | Four `<label>` tags, none with `for`; form controls have no names. Inputs have no verified label-ID association | VERIFIED source-level accessibility/collection defect; test accessibility tree before choosing repair |
+| Mobile navigation | Creates accessible toggle with `aria-label` / `aria-expanded`; supports Escape and outside click | VERIFIED source; keyboard focus handling not found, should be tested |
+| Motion | CSS transitions are present, but linked stylesheets have no `@keyframes`; no GSAP/ScrollTrigger or Motion script linked | VERIFIED source-level classification, not proof of visual experience |
+| Typography/theme | Two large palette overrides follow original linked CSS; assess computed cascade and contrast in actual browser before rewrite | VERIFIED source structure; measured dark-pixel coverage UNKNOWN |
+
+**Color contrast calculations for token pairs (theoretical opaque text/background, not measured use in page):**
+
+- Teal `#08786F` on Midnight Ink `#162536`: **2.90:1**; **fails normal-text WCAG 4.5:1** and is below 3:1 large-text threshold.
+- Mist Teal `#E1F3EF` on Ink: **13.51:1**.
+- White `#FFFFFF` on Teal: **5.35:1**.
+- Teal on Paper `#F6F8F7`: **5.01:1**.
+- Ink on Paper: **14.56:1**.
+
+Do **not** claim a site-level WCAG failure solely from a theoretical palette pair: identify where that exact pair is actually used in computed browser styles. These ratios inform the review gate, not a finished audit verdict.
+
+### Phase 00 next read-only task
+
+Obtain a true browser-level screenshot/interactive check using already available capabilities when they work. Do **not** buy credits, install third-party apps in production, ask for irrelevant ZIPs, or pretend a screenshot was captured. If browser capability remains unavailable, keep visual/performance gates `BLOCKED` with the exact limitation. Audit can continue from GitHub, Render and source data, but a full visual QA pass cannot be asserted.
