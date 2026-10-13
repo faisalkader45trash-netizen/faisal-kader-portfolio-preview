@@ -71,3 +71,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Evidence:** [PHASE-01-CONCEPT-STUDIES.md](./PHASE-01-CONCEPT-STUDIES.md). Local Chromium/Playwright verified user clicks at 1440px and 390px, keyboard variant shortcut and reduced-motion duration with no observed runtime errors/overflow in tested cases; original external fonts/logo and the current live site's performance could not be verified in the isolated runtime.
 
 **Decision status:** THREE CANDIDATES / OWNER CHOICE PENDING. No direction selected, no implementation phase approved, Phase 00 visual gate still blocked. Absolutely no merge, production edits or Render deployment.
+
+## 2026-10-13 — D-009: The Build Trace proposed (not approved)
+
+**Status:** PROPOSED / OWNER DECISION PENDING. Source-driven analysis of Signal, Atlas and Studio led to a single creative direction: "The Build Trace" — a conceptual service-inquiry request traces UI, API, validation, MongoDB record and admin view, with inspectable source links. This is a **proposal**, not a fourth rendered prototype, selected design, implementation approval or production result.
+
+**Evidence:** [PHASE-01-DIRECTION-04-PROPOSAL.md](./PHASE-01-DIRECTION-04-PROPOSAL.md) and code fetched read-only from `think-different-automation-mern`. Files prove relevant implementation structure exists, but no real backend submission, deployment or integration tests were executed.
+
+**Controls:** Remain on docs branch. Phase 00 live browser verification blocked. Wait for owner to approve/revise this visual direction before producing an isolated prototype; any production merge or deployment requires its own explicit approval.
