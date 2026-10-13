@@ -15,12 +15,12 @@
 
 | ID | Phase | Scope / result | Status | Evidence / dependencies | Next action |
 | --- | --- | --- | --- | --- | --- |
-| DOC-01 | Documentation | Approved v2.0 plan and research/tracker/decisions saved on isolated docs branch | IN PROGRESS | GitHub file readback and diff to verify | Verify all 4 documents; ensure `main` unchanged |
-| P00-01 | 00 | Determine current GitHub/Render production preview source | IN PROGRESS | GitHub `main`; Render service and latest deployment API | Record commit, entrypoint, files and discrepancies |
+| DOC-01 | Documentation | Plan, research, tracker and decisions saved and read back on docs-only branch | VERIFIED | GitHub readback of four files; main-vs-branch diff contains docs only | Keep docs branch isolated; no merge |
+| P00-01 | 00 | GitHub/Render static preview source and live deploy mapping | VERIFIED | `PHASE-00-BASELINE.md` sections A/B; commit `1198882` matches Render latest live deploy | Re-check on future release |
 | P00-02 | 00 | Verify historical local React/Vite project's current state | BLOCKED | Historical path is on user's Windows drive; not accessible here | Request current repo/worktree or folder access before declaring canonical |
-| P00-03 | 00 | Inspect current HTML/CSS/JS motion, color cascade, assets, links and unsupported claims | TODO | Current GitHub files, read-only | Record confirmed findings and exact locations |
-| P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | TODO | Browser test or Playwright execution, trace screenshots / measurements | Run if available; otherwise record as unverified |
-| P00-05 | 00 | Final Phase 00 report and source-of-truth decision | BLOCKED | P00-02, P00-03, P00-04 | Do not sign off without evidence; ask for local source or explicit target selection |
+| P00-03 | 00 | Source-level audit of HTML/CSS/JS, theme, motion, links and claims | VERIFIED | `PHASE-00-BASELINE.md` sections B/C (SOURCE ONLY) | Complete computed CSS and browser checks under P00-04 |
+| P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live text extraction verified; local DNS failure, no Playwright CLI/package; no screenshots/metrics | Arrange browser environment for actual recordings |
+| P00-05 | 00 | Phase 00 closure and future canonical implementation decision | BLOCKED | Preliminary audit in `PHASE-00-BASELINE.md`; P00-02 and P00-04 pending | Obtain local React source and visual baseline before closure |
 | P01-01 | 01 | 2 visual directions and signature storyboards | TODO | Requires owner approval of Phase 00 result | Design only; owner selects one |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
@@ -32,6 +32,12 @@
 ## Rules for updating
 
 Update the row **after** observing real evidence. For completed tasks, link the commit/PR, desktop/mobile screenshots or traces, test result, independent review and approval record. Never mark TESTED because a command was issued; confirm its outcome. Do not move to the next phase solely because a file was written. No reopening or duplicating completed tasks without a documented regression.
+
+## Phase 00 read-only audit evidence
+
+- [PHASE-00-BASELINE.md](./PHASE-00-BASELINE.md) — GitHub/Render mapping, static source findings, page extraction and blocked browser/local checks.
+- The connected GitHub repository list contained no separate current `faisal-portfolio` repository. The historical local Windows folder remains unverified.
+- No source edits, production merge or Render deploy authorized or performed.
 
 ## Current stop condition
 
