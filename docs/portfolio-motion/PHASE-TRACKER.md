@@ -31,6 +31,7 @@
 | BT-05 | QA | Responsive/integrity/performance regression evidence | NOT STARTED | Implementation plan Task 5; Phase 00 baseline | Do not mark verified until executed |
 | BT-06 | Release | Explicitly approved merge, Render smoke and rollback record | NOT STARTED / RELEASE AUTHORIZATION NOT GRANTED | Implementation plan Task 6, separate release approval | Do not merge or deploy |
 | P01-04 | 01 (placement planning only) | Original Hero + large Build Trace/form right panel and portrait supporting band | **REJECTED BY OWNER** despite LOCAL TEST PASS | [Visual critique](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md) uses actual 1440/390 screenshots and source; user says whole composition does not feel like a landing page | STOP this composition; propose a fundamentally different landing-first visual direction; no production code |
+| P01-05 | 01 (isolated redesign only) | New landing-first Hero v2: large typography, original portrait art, MERN orbit, Build Trace below Hero | LOCAL BROWSER-TESTED / OWNER VISUAL REVIEW PENDING | [New Hero v2 review](./PHASE-01-LANDING-FIRST-HERO-V2.md); screenshots 1440/390, five-viewport functional checks, 320px bounds | Owner judges visual direction; code integration still forbidden |
 | P01-01 | 01 | Build Trace direction + real-Hero placement study | DIRECTION APPROVED / ISOLATED PLACEMENT TESTED / LAYOUT APPROVAL PENDING | [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): source-derived layout, 5 local viewport screenshots; original Cloudinary images offline unavailable | Owner reviews proposed positioning, file allowlist and separate theme gate before code authorization |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO — SEPARATE APPROVAL REQUIRED | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
@@ -99,6 +100,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - The user explicitly rejected the **entire existing composition**, saying it does not feel like a landing page. Local functionality checks remain true but do not override visual failure.
 - [Evidence-based screenshot critique](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md): inspected 1440px desktop and 390px mobile screenshots; Hero became a dashboard/form, portrait moved below the main moment, client-facing copy was littered with QA/status labels.
 - **P01-04 REJECTED; prior Build Trace integration plan must not be executed unchanged.** Direction 04 core idea is not automatically rejected; a new landing-first Hero art direction is necessary before any source edits.
+
+## 2026-10-13 — New isolated Hero v2 (real visual change, not production)
+
+- [New landing-first Hero v2 evidence](./PHASE-01-LANDING-FIRST-HERO-V2.md). Previous P01-04 remains REJECTED. This is new standalone HTML with a fundamentally different first viewport; Build Trace moved below Hero.
+- Browser source tested 1440/1024/768/390/320, reduced motion and stage switching; no network POST observed. External portrait/fonts remain offline UNKNOWN.
+- **Owner visual review pending** and **no production code authorization**. GitHub main/Render untouched.
 
 ## Current stop condition
 
