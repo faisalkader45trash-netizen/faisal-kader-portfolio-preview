@@ -4,8 +4,8 @@
 - **Documentation branch:** `docs/portfolio-motion-master-plan-v2`
 - **Production branch:** `main` — read-only for this work
 - **Baseline main commit:** `1198882ba38ec50a81551be03b7f7de7ee68aa23`
-- **Plan approval:** Owner approved v2.0 for documentation and Phase 00 read-only audit ONLY.
-- **Allowed phase now:** 00
+- **Plan approval:** Master Plan v2.0 approved; Direction 04 concept and isolated prototype visual direction approved by owner; current permission is **integration planning only**, not production code.
+- **Allowed activity now:** documentation/planning for Direction 04 integration, with remaining Phase 00 live-browser tests still BLOCKED.
 - **Production code changes:** NOT AUTHORIZED
 - **Publish/merge/deploy:** NOT AUTHORIZED
 
@@ -22,9 +22,16 @@
 | P00-04 | 00 | Desktop/mobile browser visual, interaction, accessibility and performance baseline | BLOCKED | Live remote content extraction VERIFIED; Python Playwright local synthetic page works but live domain DNS blocked; no live screenshots/metrics | Retry only when a supported browser path is available; do not invent results |
 | P00-05 | 00 | Close Phase 00 baseline for owner's current deployed portfolio | BLOCKED | Operational canonical live site VERIFIED via GitHub+Render; P00-04 true browser QA pending | Finish visual/interaction baseline; no unrelated local ZIP prerequisite |
 | P01-00 | 01 (exploration only) | Three isolated Hero concept directions: Signal, Atlas, Studio | TESTED (LOCAL PROTOTYPE ONLY) | `PHASE-01-CONCEPT-STUDIES.md`; 1440px/390px browser tests; no production changes | Owner selects/revises a direction; do not promote to code |
-| P01-02 | 01 (isolated prototype only) | The Build Trace: editable sample → API → validation → MongoDB model → admin view | TESTED (LOCAL PROTOTYPE ONLY) / OWNER VISUAL REVIEW PENDING | [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md); 5 viewport tests, Run/Pause, keyboard, reduced motion, 0 simulated API submissions | Owner reviews standalone HTML; do not implement or deploy |
-| P01-01 | 01 | Approved visual direction and production-ready signature storyboards | TODO | Phase 00 live browser QA still blocked; P01-00 awaits owner choice | After owner selection and further evidence, request specific implementation approval |
-| P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO | Approved Phase 01 | Small isolated implementation + regression QA |
+| P01-02 | 01 (isolated prototype only) | The Build Trace: editable sample → API → validation → MongoDB model → admin view | APPROVED VISUAL DIRECTION / TESTED LOCALLY | [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md); owner explicitly approved visual direction 2026-10-13 | Integration plan only authorized; code changes still require a new approval |
+| P01-03 | 01 (planning only) | Build Trace live integration implementation plan, risk assessment and P0 test matrix | DOCUMENTED / OWNER SCOPE REVIEW PENDING | [Implementation Plan](./PHASE-01-DIRECTION-04-INTEGRATION-PLAN.md), [Risks](./PHASE-01-DIRECTION-04-INTEGRATION-RISKS.md), [Tests](./PHASE-01-DIRECTION-04-INTEGRATION-TESTS.md) | Owner reviews and separately authorizes code scope; no changes now |
+| BT-01 | 03 integration | Guard source/asset contracts and tests | NOT STARTED | Implementation plan Task 1; Gate A required | Wait for explicit code approval |
+| BT-02 | 03 integration | Static scoped markup and CSS with original assets | NOT STARTED | Implementation plan Task 2; approved Hero placement + Gate A | Do not edit now |
+| BT-03 | 03 integration | Local-only trace JS and valid/invalid sample behavior | NOT STARTED | Implementation plan Task 3; browser P0 tests | Do not edit now |
+| BT-04 | 03 integration | Accessible motion, keyboard and reduced-motion | NOT STARTED | Implementation plan Task 4; QA | Do not edit now |
+| BT-05 | QA | Responsive/integrity/performance regression evidence | NOT STARTED | Implementation plan Task 5; Phase 00 baseline | Do not mark verified until executed |
+| BT-06 | Release | Explicitly approved merge, Render smoke and rollback record | NOT STARTED / RELEASE AUTHORIZATION NOT GRANTED | Implementation plan Task 6, separate release approval | Do not merge or deploy |
+| P01-01 | 01 | Selected signature direction and reviewed layout storyboards | VISUAL DIRECTION APPROVED / EXACT LIVE HERO PLACEMENT PENDING | Build Trace prototype visual direction owner-approved; current Hero portrait/floating-card placement not yet reviewed in live context | Approve placement + Phase 02 dependency before implementation |
+| P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO — SEPARATE APPROVAL REQUIRED | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
 | P04-01 | 04 | Service cards and MERN stack interactions | TODO | Verified hero style and approach | Review purposeful interaction |
 | P05-01 | 05 | Journey and fact-checked case studies | TODO | Flagship project evidence check | Show evidence, never planned products as completed |
@@ -70,8 +77,16 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - Owner authorized an **isolated** animated prototype, explicitly not production changes.
 - [Direction 04 QA Evidence](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md) documents 1440, 1024, 768, 390, 320px browser tests, valid/invalid sample, reset, source links, focus, keyboard, reduced motion, Run/Pause and zero observed simulated API POSTs.
 - The standalone prototype HTML and screenshot artifacts exist in the current conversation, **not in the production repo**. External logo/font loading and production responsiveness remain unverified.
-- **P01-02 locally TESTED, owner visual review pending**; Phase 00 live browser baseline remains BLOCKED. No merge/deploy.
+- **P01-02 locally TESTED + visual direction APPROVED by owner**; Phase 00 live browser baseline remains BLOCKED. No merge/deploy.
+
+## Direction 04 — detailed integration planning (2026-10-13)
+
+- Owner approved **visual direction** and explicitly asked for detailed file-by-file integration planning, risk assessment and tests; **not production code authorization**.
+- [Implementation Plan](./PHASE-01-DIRECTION-04-INTEGRATION-PLAN.md) — scoped implementation tasks BT-01…BT-06, file responsibilities, rollback/approval boundaries.
+- [Risk Register](./PHASE-01-DIRECTION-04-INTEGRATION-RISKS.md) — severity/likelihood estimates, tests and release blockers.
+- [Test Matrix](./PHASE-01-DIRECTION-04-INTEGRATION-TESTS.md) — proposed browser, accessibility, privacy, responsive, performance and release gates; **none run on integration**.
+- Pending separate authorization for code-change scope, placement of the existing Hero portrait and MERN cards, and before/after visual baseline.
 
 ## Current stop condition
 
-**After documentation verification and a read-only Phase 00 audit, STOP.** Report findings/unknowns to the owner. Do not edit production files, merge the docs branch, trigger a deploy, or start design implementation in this authorization.
+**Current stop:** Documentation/planning work only. Do not edit production code, create an implementation commit, merge the docs branch, trigger a Render deploy or start Theme/Hero implementation without a new explicit code-scope approval. The separate Phase 00 live browser baseline remains BLOCKED.
