@@ -115,3 +115,37 @@ Do **not** claim a site-level WCAG failure solely from a theoretical palette pai
 ### Phase 00 next read-only task
 
 Obtain a true browser-level screenshot/interactive check using already available capabilities when they work. Do **not** buy credits, install third-party apps in production, ask for irrelevant ZIPs, or pretend a screenshot was captured. If browser capability remains unavailable, keep visual/performance gates `BLOCKED` with the exact limitation. Audit can continue from GitHub, Render and source data, but a full visual QA pass cannot be asserted.
+
+## 2026-10-13 — Browser capability and semantic audit follow-up
+
+**Execution boundary:** Authorized Phase 00 read-only QA; no production source changes, no form submissions, no merges or deployment. This follow-up is based on current GitHub `main/index.html`, `main/mobile-nav.js`, selected CSS files and attempted local browser execution.
+
+### Browser accessibility check: attempted, but live capture not available
+
+- Runtime has Chromium at `/usr/bin/chromium` and Python Playwright import succeeds. A **synthetic** browser page set with `page.set_content()` rendered and created a screenshot, proving only that local browser rendering can work.
+- Navigation to a `data:` URL was rejected with `net::ERR_BLOCKED_BY_ADMINISTRATOR`. Direct `curl` to the live Render hostname failed DNS resolution (`curl: (6) Could not resolve host`). Thus the synthetic screenshot is **not** a screenshot of the portfolio.
+- No actual live desktop/mobile screenshot, computed-style inspection, network/font check, click/tab navigation or performance trace was executed. Local Chromium capability **must not** be mistaken for verified live-site UI.
+- Browser automation via metered TinyFish account is presently unavailable without account funds. Do **not** start a paid run or request payment for this optional verification route.
+
+### HTML/JS source audit — high-confidence findings, not browser-tested
+
+| ID | Priority | Evidence from deployed GitHub source | Observation / exact QA implication |
+| --- | --- | --- | --- |
+| A11Y-01 | HIGH | `index.html` has no `<main>` landmark and no skip-to-content link | Screen-reader/keyboard navigation landmarks need review. Exact remediation is a future separately approved code task. |
+| A11Y-02 | HIGH | All four `<label>` tags in the contact form have no `for`; inputs/textarea have no matching IDs or `name` attributes | Label-to-control association missing. Confirm accessible names and remediation before adding more contact animations. |
+| FUNC-01 | HIGH | Contact `Send Message` button uses `type="button"`; `index.html` loads only `mobile-nav.js`; no form submission handler appears | No source evidence of delivery; don't advertise functional contact form or perform unapproved real send. Existing `mailto:` alternative is present. |
+| NAV-01 | VERIFIED SOURCE | All seven internal anchor IDs `home`, `about`, `skills`, `journey`, `projects`, `case`, `contact` exist; all local `href="#..."` targets match | Anchor references are structurally valid, though actual scroll offsets and mobile browser behavior remain untested. |
+| IMG-01 | VERIFIED SOURCE | 15 `<img>` tags in `index.html`, all declare `alt` | Presence confirmed; meaningfulness, actual decoded asset loads, image dimensions and CLS untested. |
+| NAV-02 | SOURCE CORRECTION | `mobile-nav.js` handles Escape at lines 67–72 and executes `button.focus()` at line 70 | Prior shorthand `focus management not found` was inaccurate. Escape **does return focus**. It does **not** establish a complete focus-management audit; test opening, tab order and dismiss behavior in browser. |
+| MOTION-01 | VERIFIED SOURCE | 14 linked CSS files, no `@keyframes` and no linked third-party scroll animation engine | Basic hover/menu transitions exist; advanced scroll-linked motion is not evidenced in this public preview source. |
+| PALETTE-01 | SOURCE-LEVEL CHECK | Dark hero/menu/footer CSS and two palette override sheets; selected pair Teal `#08786F` on Ink `#162536` computes ~2.90:1 | This pair is unsuitable for normal text if used as text/background; **do not report site-wide WCAG failure** without verifying actual computed usage. |
+
+### Reproducible minimal checks once a live browser is available
+
+1. Capture `1440x900`, `768x1024`, and `390x844` screenshots at page top and each section; record CSS/computed background and color, horizontal overflow and font loading.
+2. Tap mobile menu; confirm button's accessible name/expanded state, all 6 section links, open/close interaction, Escape focus return and no tap/scroll trap.
+3. Use keyboard Tab / Shift+Tab through navigation and contact form; inspect landmarks and label associations with accessibility tree; do **not** submit the form.
+4. Toggle `prefers-reduced-motion: reduce`; verify existing and proposed effects preserve meaning and do not cause distracting movement.
+5. Record browser console/network for 14 CSS requests, Google Font fetches and Cloudinary images. Distinguish lab data from field Core Web Vitals.
+
+**Status:** P00-04 remains **BLOCKED** for a real live browser verification. Source-level audit findings A11Y-01/A11Y-02/FUNC-01/NAV-01/IMG-01/NAV-02 are recorded as diagnostic evidence, not completed fixes or executed browser tests. Implementation still requires separate approval.
