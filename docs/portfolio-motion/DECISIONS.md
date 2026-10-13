@@ -117,3 +117,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Decision:** Mark P01-04 **REJECTED BY OWNER** despite technical local test passes. Suspend its integration execution plan. Keep the *underlying optional Build Trace explanatory concept* separate from its failed Hero packaging. Next work should propose a genuinely different, landing-first composition, not add more cards/animation to the rejected one.
 
 **Authorization:** No production code changes, no GitHub main merge or Render deployment. Documentation status updated only.
+
+## 2026-10-13 — D-014: Create an actual replacement Hero after owner's unchanged-design complaint
+
+**Owner feedback:** Previous assistant only wrote a critique without making any new visual changes; user correctly pointed out the page looked unchanged and the project had not progressed visually.
+
+**Action taken:** Built `faisal-portfolio-new-hero-v2.html` in isolated conversation runtime. The new concept is landing-first: large editorial headline and preserved CTA/portrait/logo, four restrained MERN labels in orbit art; separate below-Hero Build Trace interactive story rather than dominant dashboard form. Five local viewport browser checks and screenshot critique performed. See [evidence](./PHASE-01-LANDING-FIRST-HERO-V2.md).
+
+**Status:** New isolated preview LOCAL TESTED / OWNER VISUAL REVIEW PENDING. The rejected P01-04 placement remains rejected. No production implementation authority inferred, no merge or Render deploy. Existing integration plan must be revised after visual acceptance.
