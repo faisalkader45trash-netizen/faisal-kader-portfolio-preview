@@ -79,3 +79,11 @@ Append a dated, numbered entry for each future change in direction, rejected alt
 **Evidence:** [PHASE-01-DIRECTION-04-PROPOSAL.md](./PHASE-01-DIRECTION-04-PROPOSAL.md) and code fetched read-only from `think-different-automation-mern`. Files prove relevant implementation structure exists, but no real backend submission, deployment or integration tests were executed.
 
 **Controls:** Remain on docs branch. Phase 00 live browser verification blocked. Wait for owner to approve/revise this visual direction before producing an isolated prototype; any production merge or deployment requires its own explicit approval.
+
+## 2026-10-13 — D-010: Direction 04 concept approved for isolated prototype; browser QA recorded
+
+**Owner authorization:** The Build Trace Direction 04 proposal approved for isolated interactive Hero prototype build and verification. Explicit: **do not change production code, GitHub `main`, or Render deployment**.
+
+**Executed:** Created self-contained HTML concept in chat artifact, with editable local sample form, five-step architecture inspection, GitHub source evidence links, simulated validation and admin view, Run/Pause/Reset and reduced-motion alternative. Tested five viewport widths (1440/1024/768/390/320), keyboard navigation, valid/invalid inputs, sample value propagation, and confirmed no observed API POST request. Visual screenshots captured locally using Chromium/Playwright with offline font fallback; see [PHASE-01-DIRECTION-04-PROTOTYPE-QA.md](./PHASE-01-DIRECTION-04-PROTOTYPE-QA.md).
+
+**Status:** LOCAL PROTOTYPE TESTED; owner visual/design approval of the actual prototype is **pending**. This does not satisfy the separate blocked Phase 00 live-website browser audit and does not authorize merging/deployment or implementing live features.
