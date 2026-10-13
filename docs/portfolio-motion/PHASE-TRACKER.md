@@ -32,6 +32,7 @@
 | BT-06 | Release | Explicitly approved merge, Render smoke and rollback record | NOT STARTED / RELEASE AUTHORIZATION NOT GRANTED | Implementation plan Task 6, separate release approval | Do not merge or deploy |
 | P01-04 | 01 (placement planning only) | Original Hero + large Build Trace/form right panel and portrait supporting band | **REJECTED BY OWNER** despite LOCAL TEST PASS | [Visual critique](./PHASE-01-PLACEMENT-VISUAL-CRITIQUE.md) uses actual 1440/390 screenshots and source; user says whole composition does not feel like a landing page | STOP this composition; propose a fundamentally different landing-first visual direction; no production code |
 | P01-05 | 01 (isolated redesign only) | New landing-first Hero v2: large typography, original portrait art, MERN orbit, Build Trace below Hero | LOCAL BROWSER-TESTED / OWNER VISUAL REVIEW PENDING | [New Hero v2 review](./PHASE-01-LANDING-FIRST-HERO-V2.md); screenshots 1440/390, five-viewport functional checks, 320px bounds | Owner judges visual direction; code integration still forbidden |
+| P01-06 | 01 (Hero-only design study) | Approved hybrid reference translated into an isolated Hero HTML preview; editable Figma Hero delayed by Free MCP call limit | LOCAL BROWSER-TESTED / FIGMA BLOCKED / OWNER REVIEW PENDING | [Hero-only report](./PHASE-01-HERO-ONLY-FIGMA-QUOTA-AND-PREVIEW.md), local HTML and screenshots at 1440/1024/768/390/320; original Cloudinary asset URLs preserved | Owner reviews Hero; retry Figma editable build when call limit permits; never touch production |
 | P01-01 | 01 | Build Trace direction + real-Hero placement study | DIRECTION APPROVED / ISOLATED PLACEMENT TESTED / LAYOUT APPROVAL PENDING | [Hero Placement Review](./PHASE-01-DIRECTION-04-HERO-PLACEMENT-REVIEW.md): source-derived layout, 5 local viewport screenshots; original Cloudinary images offline unavailable | Owner reviews proposed positioning, file allowlist and separate theme gate before code authorization |
 | P02-01 | 02 | Theme/CSS consolidation and accessible light-first palette | TODO — SEPARATE APPROVAL REQUIRED | Approved Phase 01 | Small isolated implementation + regression QA |
 | P03-01 | 03 | Signature interactive Hero concept | TODO | Approved theme/hero storyboard | Accessible motion prototype and measure |
@@ -106,6 +107,12 @@ Update the row **after** observing real evidence. For completed tasks, link the 
 - [New landing-first Hero v2 evidence](./PHASE-01-LANDING-FIRST-HERO-V2.md). Previous P01-04 remains REJECTED. This is new standalone HTML with a fundamentally different first viewport; Build Trace moved below Hero.
 - Browser source tested 1440/1024/768/390/320, reduced motion and stage switching; no network POST observed. External portrait/fonts remain offline UNKNOWN.
 - **Owner visual review pending** and **no production code authorization**. GitHub main/Render untouched.
+
+## 2026-10-13 — Hero-only approved-hybrid study
+
+- [Hero-only report](./PHASE-01-HERO-ONLY-FIGMA-QUOTA-AND-PREVIEW.md): Figma Starter MCP call cap blocked further edits after earlier successful palette creation. No editable Figma Hero exists yet.
+- Standalone HTML Hero and five offline Chromium screenshot/test artifacts in conversation, not `main`. No API submissions, observed errors or overflow. Cloudinary image/font loads remain unverified.
+- Owner visual review pending. Resume editable Figma Hero after tool allowance is restored; no paid upgrade asked.
 
 ## Current stop condition
 
